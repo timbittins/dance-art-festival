@@ -1,0 +1,88 @@
+/* I C O N S */
+// Icons Big
+// Icons Small
+// Menu Button Lines
+
+/* B U T T O N S */
+.button__regular {
+    @include button;
+}
+
+.button__ghost {
+    @include button;
+    color: $clr-prime;
+    background-color: $clr-grey-dark;
+    border: .2rem solid $clr-prime;
+
+    & a {
+        color: $clr-prime;
+    }
+}
+
+.button__and-icon {
+    @include flex($justify-content: flex-start);
+    gap: 1rem;
+    min-width: 20rem;
+    padding: 0;
+    border-radius: 1rem;
+
+    & .button__link-icon {
+        width: 4.5rem;
+        padding: .7rem;
+        box-shadow: .1rem 0rem 0rem .2rem  $clr-prime, -.1rem 0rem 0rem .2rem  $clr-prime;
+        border-radius: 1rem;
+
+    }
+}
+
+.menu__icon--big {
+    position: fixed;
+    height: $icon-big__size--s;
+    width: $icon-big__size--s;
+    border-radius: 50%;
+    z-index: 92;
+
+    @include rwd(mq-m-p) {
+        height: $icon-big__size--l;
+        width: $icon-big__size--l;
+    }
+
+    @include rwd(mq-m-l) {
+        height: $icon-big__size--l;
+        width: $icon-big__size--l;
+    }
+}
+
+.menu__icon--small {
+    height: $icon-small__size--s;
+    width: $icon-small__size--s;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    @include rwd(mq-m-p) {
+        height: $icon-small__size--l;
+        width: $icon-small__size--l;
+    }
+
+    @include rwd(mq-m-l) {
+        height: calc(var(--icon-small__size--l) - 1.5rem);
+        width: calc(var(--icon-small__size--l) - 1.5rem);
+    }
+
+    @include rwd(mq-l) {
+        height: calc(var(--icon-small__size--l) / 1.6);
+        width: calc(var(--icon-small__size--l) / 1.6);
+
+        &:active {
+            box-shadow: 0 0 0 0.2rem $clr-white;
+        }
+
+        &:hover {
+            box-shadow: $box-shadow__hover;
+        }
+    }
+}
+
+[data-category="social__link"] {
+    box-shadow: 0 0 0 0.2rem $clr-prime;
+}

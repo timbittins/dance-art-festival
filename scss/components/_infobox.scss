@@ -1,0 +1,135 @@
+// I N F O B O X
+.pages__infobox {
+    @include pagebox--mixin();
+    width: 90%;
+    // background-color: $clr-grey-dark;
+    // border: .2rem solid $clr-white;
+}
+
+.infobox__container {
+    @include pagebox--mixin();
+    @include pagebox--hover;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 0 0 2px $clr-prime;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    & .infobox__img {
+        width: 33%;
+        object-fit: contain;
+        flex: 1 2 100%;
+        box-shadow: .1rem 0rem 0rem .2rem  $clr-prime;
+        border-radius: $infobox__border-radius;
+        transition: box-shadow .3s ease;
+
+        @include rwd(mq-m-p) {
+            flex: 1 3 100%;
+        }
+    }
+
+    & .infobox__headline {
+        position: relative;
+        flex: 2 1 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 1.5rem 2rem 2rem;
+
+        & .infobox__h3 {
+            margin: 0;
+        }
+
+        & .infobox__more--de,
+        & .infobox__more--en {
+            margin: .8rem 0 0;
+
+            @include rwd(mq-l) {
+                margin: .8rem 0 0 3rem;
+            }
+        }
+
+        & .infobox__more--de::after {
+            content: "mehr...";
+            display: flex;
+            align-items: center;
+            color: $clr-prime;
+            transition: all 0.3s ease;
+
+        }
+
+        & .infobox__more--en::after {
+            content: "more...";
+            display: flex;
+            align-items: center;
+            color: $clr-prime;
+            transition: all 0.3s ease;
+        }
+
+        & .infobox__teaser {
+            display: none;
+
+            @include rwd(mq-l) {
+                display: block;
+                margin: 2rem 0;
+            }
+
+            & p {
+                letter-spacing: .03;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+.infobox__content {
+    padding: 2rem 0;
+
+    & .infobox__text {
+        margin: 2rem 1rem;
+        transition: font-size 300ms ease, margin 300ms ease;
+    }
+
+    & .infobox__h4 {
+        margin: 2rem 1rem;
+    }
+}
+
+/* I N F O B O X   S W I T C H */
+// Infobox Checkbox
+.pagebox__checkbox {
+    display: none;
+}
+
+.infobox__label {
+    cursor: pointer;
+}
+
+
+// Infobox More or Less
+.pagebox__checkbox:checked+.infobox__label .infobox__more--de::after {
+    content: "weniger...";
+}
+
+.pagebox__checkbox:checked+.infobox__label .infobox__more--en::after {
+    content: "less...";
+}
+
+// Infobox Content
+.pagebox__checkbox:not(:checked)~.infobox__content {
+    & .infobox__text {
+        margin: 0;
+        font-size: 0;
+
+        & .intext__link {
+            font-size: 0;
+        }
+    }
+
+    & .infobox__h4 {
+        margin: 0;
+        font-size: 0;
+    }
+
+}

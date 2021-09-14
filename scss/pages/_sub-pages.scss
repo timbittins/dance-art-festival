@@ -1,0 +1,28 @@
+// H E A D E R
+.pages__header {
+    position: relative;
+    width: 100vw;
+
+    & .pages__h2 {
+        text-align: center;
+        margin: 3rem 0;
+
+        @include rwd(mq-l) {
+            margin: 15rem 0 0;
+        }
+    }
+}
+
+/* C O N T E N T */
+.pages__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem 3rem;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 0;
+
+}
+

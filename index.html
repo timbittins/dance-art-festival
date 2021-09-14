@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en de">
+<head>
+<!--DEV STATUS-->
+<meta name="robots" content="noindex nofollow">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Urban Dance Event">
+    <meta name="keywords" content="Urban Dance, Battle, Workshop, Jam, Popping, Hiphop">
+    <meta name="author" content="Tim Bittins">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Art festival</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/daf_favicon.png" type="image/x-icon">
+</head>
+
+<body> 
+    <input type="radio" id="english" name="language" value="english"> 
+    <input type="radio" id="german" name="language" value="german" checked>
+
+    <header class="header__main">
+        <nav>
+            <input type="checkbox" name="navigation switch" id="navigation">
+            <label for="navigation">
+            
+                <div class="menu__button menu__icon--big">
+                    <div class="menu__button--lines"></div>
+                </div>
+            </label>
+            
+            <div class="menu">
+                <div class="menu__container">   
+                    <ul class="menu__bar--home">
+                        <li><a href="#" id="home" onclick="requestHome()"><img class="menu__icon--big daf-logo" src="img/daf_logo.svg" alt="Dance Art festival Logo"></a></li>
+                    </ul> 
+                    <div class="menu__bar">
+                        <ul class="menu__bar--privacy">
+                            <li><a href="#" id="impressum" class="menu__link" onclick="requestImpressum()"><p>Impressum</p></a></li>
+                            <li><a href="#" id="datenschutz" class="menu__link" onclick="requestPrivacy()"><p lang="de">Datenschutz</p><p lang="en">Privacy</p></a></li>  
+                        </ul>
+                        <ul class="menu__bar--pages">
+                            <li><a href="#" id="news"  class="menu__link" onclick="requestNews()"><p>News</p></a></li>
+                            <li><a href="#" id="guests" class="menu__link" onclick="requestGuests()"><p lang="de">Gäste</p><p lang="en">Guests</p></a></li>
+                            <li><a href="#" id="fotos" class="menu__link" onclick="requestFotos()"><p lang="de">Fotos</p><p lang="en">Photos</p></a></li>
+                            <li><a href="#" id="videos" class="menu__link" onclick="requestVideos()"><p>Videos</p></a></li>
+                            <li><a href="#" id="partners" class="menu__link" onclick="requestPartners()"><p>Partner</p></a></li>
+                        </ul>
+                        <ul class="menu__bar--social-media">
+                            <li><a  href="https://www.instagram.com/danceartfestival/" target="_blank"><img data-category="social__link" class="menu__icon--small" src="img/sm_ig.svg" alt="Instagram Icon"></a></li>
+                            <li><a href="https://www.facebook.com/danceartfestivalberlin/" target="_blank"><img data-category="social__link" class="menu__icon--small" src="img/sm_fb.svg" alt="Facebook icon"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCP3_DFvPQdP9XABAeD2XtTQ" target="_blank"><img data-category="social__link" class="menu__icon--small" src="img/sm_yt.svg" alt="Youtube icon"></a></li>
+                            <li><a href="mailto:info@dance-art-festival.com"><img data-category="social__link" class="menu__icon--small" src="img/sm_mail.svg" alt="Email icon"></a></li>
+                        </ul>
+                        <div class="menu__bar--languages">
+                            
+                                <label for="english">
+                                    <img data-category="language__english" class="menu__icon--small" src="img/lang_en.svg" alt="englisch">
+                                </label>
+
+                            
+                                <label for="german">
+                                    <img data-category="language__german" class="menu__icon--small" src="img/lang_de.svg" alt="deutsch">
+                                </label>
+                            
+                        </div>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="main__website">
+
+        </section>
+
+
+        <div class="up-to-top__button" onclick="topFunction()" id="toTopButton" title="to top">
+            <div class="up-to-top__button--arrow"></div>
+        </div>
+
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script>console.log(window.innerWidth);</script>
+</body>
+</html>

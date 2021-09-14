@@ -1,0 +1,222 @@
+/* G L O B A L */
+// Main
+html {
+    font-family: isidora, sans-serif;
+    font-size: 62.5%;
+    color: $clr-white;
+}
+
+
+
+$fs__h1: var(--fs-h1);
+
+h1 {
+    font-family: isidora-semibold, sans-serif;
+    font-size: $fs__h1;
+    letter-spacing: -0.04em;
+}
+
+$fs__h2: var(--fs-h2);
+
+h2 {
+    font-family: isidora-bold, sans-serif;
+    font-size: $fs__h2;
+    letter-spacing: 0.02em;
+}
+
+$fs__h3: var(--fs-h3);
+
+h3 {
+    font-family: isidora-medium, sans-serif;
+    font-size: $fs__h3;
+}
+
+.h4__main {
+    @include rwd(mq-l) {
+        font-size: clamp(1.6rem, 3.12vw, 4rem);
+    }
+}
+
+$fs__h4: var(--fs-h4);
+
+h4 {
+    font-family: isidora-medium, sans-serif;
+    font-size: $fs__h4;
+    letter-spacing: 0.1em;
+}
+
+$fs__h5: var(--fs-h5);
+
+h5 {
+    font-family: isidora-medium, sans-serif;
+    font-size: $fs__h5;
+    letter-spacing: 0.1em;
+}
+
+$fs__p : var(--fs-p);
+
+p {
+    font-size: $fs__p;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+}
+
+$fs__fig: var(--fs-fig);
+
+figcaption {
+    font-size: $fs__fig;
+    letter-spacing: 0.2rem;
+}
+
+.main__h1,
+h1,
+h2,
+h3,
+h4,
+p,
+figcaption {
+    margin: 1em 3rem 0;
+}
+
+
+
+
+/* T E X T   E F F E C T S */
+// Landing Page Headlines
+$text-fx__text-shadow--landing-page: 2px 2px 5px $clr-grey-dark,
+-2px -2px 5px $clr-grey-dark;
+
+// Links
+a:link,
+a:visited {
+    display: block;
+    text-decoration: none;
+    font-family: isidora-semibold;
+    text-align: center;
+    color: $clr-prime;
+
+    &:link p {
+        padding: 1rem 1rem;
+        margin: 0;
+    }
+
+    @include rwd(mq-s-l) {
+        &:link p {
+            padding: .5rem 1rem;
+        }
+    }
+
+    @include rwd(mq-m-p) {
+
+        &:link p {
+            font-size: calc(var(--fs-p) + 1rem);
+        }
+    }
+
+    @include rwd(mq-m-l) {
+
+        &:link p {
+            font-size: calc(var(--fs-p) + .5rem);
+        }
+    }
+
+    @include rwd(mq-l) {
+
+        &:link,
+        &:visited {
+            margin: 0 1rem;
+            padding: 0;
+            font-size: clamp(16px, 2.2rem, 26px);
+            text-align: left;
+            transition: color 0.4s ease-in-out;
+        }
+
+        &:link p {
+            padding: 8px 20px;
+            margin: 0;
+        }
+
+        &:hover {
+            color: $clr-contrast;
+        }
+
+        &:active {
+            color: $clr-white;
+        }
+    }
+
+    @include rwd(mq-xl) {
+        &:link p {
+            padding: 8px 0px;
+            margin: 0;
+        }
+    }
+}
+
+.current:link,
+.current:visited {
+    color: $clr-white;
+}
+
+// Links in text
+.intext__link:link,
+.intext__link:visited {
+    display: inline;
+    font-size: $fs__p;
+    color: $clr-prime;
+    margin: 0;
+    padding: 0;
+}
+
+// Lists
+li {
+    list-style-type: none;
+    width: 100%;
+    padding: 4px 0;
+
+    @include rwd(mq-m-p) {
+        padding: 8px 0;
+    }
+
+    @include rwd(mq-xl) {
+        width: auto;
+    }
+}
+
+.menu__bar--pages li,
+.menu__bar--privacy li {
+    border-top: 1px solid $clr-prime-dark;
+
+    &:first-of-type {
+        border-top: none;
+    }
+
+    @include rwd(mq-xl) {
+        border-top: none;
+    }
+}
+
+
+// Privacy Links
+.menu__bar--privacy>li {
+
+    @include rwd(mq-s-l) {
+        border-top: none;
+
+        &:last-child {
+            border-left: 1px solid $clr-prime;
+        }
+    }
+
+    @include rwd(mq-l) {
+        &:last-child {
+            border-left: none;
+        }
+    }
+
+    @include rwd(mq-xl) {
+        & a:link p {
+            padding: 8px 20px;
+        }
+    }
+}

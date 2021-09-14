@@ -1,0 +1,62 @@
+/* M E D I A    Q U E R I E S  */
+
+// Mobile first
+// font-size: 100%  =>  1rem = 16px
+
+/*
+WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT: 
+---------------         ------------------------        ----------
+< 700px (43.75em)       small devices portrait          default
+> 480px (30em)        small devices landscape         mq-s-l
+> 700px (43.75em)       medium devices portrait         mq-m-p  
+> 900px (56.25em)       medium devices landscape        mq-m-l
+> 1050px (65.625em)     large devices                   mq-l
+> 1540px (96.25em)         extra large devices             mq-xl
+*/
+
+/*  M Q   M I X I N  */
+
+@mixin rwd($breakpoint) {
+
+    @if $breakpoint==mq-s-l {
+        @media (min-width: 30em) and (orientation: landscape) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==mq-m-p {
+        @media (min-width: 43.75em) and (orientation: portrait) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==mq-m-l {
+        @media (min-width: 56.25em) and (orientation: landscape) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==mq-l {
+        @media (min-width: 65.625em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==mq-xl {
+        @media (min-width: 96.25em) {
+            @content
+        }
+
+        ;
+    }
+
+
+}

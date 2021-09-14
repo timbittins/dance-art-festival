@@ -1,0 +1,23 @@
+/* H E A D E R */
+.header__main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+}
+
+.header__main nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* B O D Y */
+#main__website {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}

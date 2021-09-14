@@ -1,0 +1,54 @@
+:root {
+    /* COLORS */
+    --clr-prime: #feea01;
+    --clr-prime-tr: rgba(254, 234, 1, 0.1);
+    --clr-prime-dark: #988c01;
+    --clr-prime-dark-tr: rgba(152, 140, 1, 0.1);
+    --clr-prime-light: #fff9b3;
+    --clr-contrast: #19d0ff;
+    --clr-contrast-tr: rgba(#19d0ff, 0.25);
+    --clr-grey-dark: #222222;
+    --clr-grey-dark-tr: rgba(34, 34, 34, 0.6);
+    --clr-grey-medium: #999999;
+    --clr-grey-medium-tr: rgba(153, 153, 153, 0.5);
+    --clr-grey-light: #cccccc;
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+
+    /* FONTS */
+    --fs-p: min(max(1.6rem, 2vw), 2rem);
+    --fs-fig: min(max(1rem, 1.5vw), 1.4rem);
+    --fs-h1: min(max(3rem, 7vw), 8.1rem);
+    --fs-h2: min(max(2.5rem, 4.5vw), 5.4rem);
+    --fs-h3: min(max(2rem, 3vw), 2.4rem);
+    --fs-h4: min(max(1.6rem, 2vw), 2rem);
+    --fs-h5: min(max(1.4rem, 1.8vw), 1.6rem);
+
+    /* COMPONENTS */
+    // Icons
+    --icon-big__size--s: min(max(5rem, 5vw), 6.5rem);
+    --icon-big__size--l: min(max(7rem, 9vw), 6.5rem);
+    --icon-big__padding: min(max(2rem, 5vw), 4.5rem);
+    --icon-small__size--s: min(max(2.7rem, 3vw), 3.3rem);
+    --icon-small__size--l: min(max(3.7rem, 5vw), 6rem);
+
+    // Buttons
+    --button-lines__padding: min(max(.8rem, 1vw), 1.1rem);
+
+    --infobox__width: min(max(30rem, 70vw), 100rem);
+    --infobox__border-radius: min(max(2rem, 4vw), 7rem);
+    --infobox__headline-padding: 1vw 6vw;
+
+
+    /* G U E S T B O X E S */
+    --guestbox__foto--border-radius: min(max(1rem, 4vw), 7rem);
+
+    /* LAYOUTS */
+    // Menu
+    --menu-bars__margin: 0 2rem 2rem 0;
+    --menu-bars__padding--top: 10rem;
+
+    /* S T Y L E S */
+    --box-shadow__hover: 0 0 0 .4rem var(--clr-contrast);
+
+}

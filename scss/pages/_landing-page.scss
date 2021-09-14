@@ -1,0 +1,124 @@
+/* L A N D I N G    P A G E  */
+// -------------------------------------------------
+.landing__container {
+    position: relative;
+    @include flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+// TEXT ------------------------------------------------------
+
+.container__headline {
+    padding: 0 15vw;
+    z-index: 1;
+
+    &>* {
+        margin: 0;
+        color: $clr-prime;
+    }
+
+    .headline__h1 {
+        margin: 10vh 0;
+        font-family: isidora-medium, sans-serif;
+        font-size: 8rem;
+        letter-spacing: .01em;
+        line-height: .9;
+    }
+
+    .headline__h2 {
+        line-height: 1.4;
+    }
+
+    @include rwd(mq-s-l) {
+        padding: 0 0 0 25vw;
+
+        .headline__h1 {
+            margin: 5vh 0;
+            font-size: 7rem;
+        }
+
+        .headline__h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @include rwd(mq-m-p) {
+        padding: 0 20vw;
+
+        .headline__h1 {
+            margin: 18vh 0 8vh;
+            font-size: 13rem;
+        }
+
+        .headline__h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+    @include rwd(mq-m-l) {
+        padding: 0 0 0 25vw;
+
+        .headline__h1 {
+            margin: 18vh 0 8vh;
+            font-size: 13rem;
+        }
+
+        .headline__h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+    @include rwd(mq-l) {
+        padding: 0;
+
+        .headline__h1 {
+            margin: 3vh 0;
+            font-size: 13rem;
+        }
+
+        .headline__h2 {
+            line-height: 0;
+            font-size: 4.5rem;
+            text-align: right;
+        }
+    }
+}
+
+// IMAGE ------------------------------------------------------
+
+.container__background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    .background__shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include bg-color-overlay(#000, 0.6);
+    }
+
+    .background__image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .background__image {
+    }
+
+    @include rwd(mq-s-l) {
+        left: -10%;
+        width: 50%;
+    }
+
+    @include rwd(mq-m-l) {
+        left: -10%;
+        width: 50%;
+    }
+    @include rwd(mq-l) {
+        left: 0%;
+        width: 40%;
+    }
+}

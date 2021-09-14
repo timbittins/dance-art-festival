@@ -1,0 +1,99 @@
+/*  M I X I N S  */
+
+// COLOR MIXINS
+@mixin bg-color-overlay ($background-color: #feea01, $transparency: 0.5) {
+    background-color: rgba($background-color, $transparency);
+  }
+
+/* B U T T O N   M I X I N S */
+// Standard Button
+@mixin button {
+    display: block;
+    padding: 1rem 2rem;
+    font-family: isidora-semibold;
+    font-size: $fs__h5;
+    color: $clr-grey-dark;
+    background-color: $clr-prime;
+    border: .2rem solid $clr-grey-dark;
+    border-radius: .4em;
+    cursor: pointer;
+    transition-duration: 150ms;
+    & a {
+        color: $clr-grey-dark;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include rwd(mq-l) {
+        &:hover {
+            background-color: $clr-white;
+            color: $clr-prime;
+        }
+
+        &:active {
+            background-color: $clr-prime-light;
+            color: $clr-prime;
+            outline: .4rem solid red;
+        }
+    }
+}
+
+// Icon Button
+@mixin icon ($icon-size: #{$btn-icon-size}) {
+    width: $icon-size;
+    height: $icon-size;
+    background-color: $clr-prime;
+    border: .13rem solid $clr-prime-light;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 150ms;
+
+    @include rwd(mq-m-p) {
+        --btn-icon-size: min(max(3.125rem, 100vw), 5rem);
+    }
+    @include rwd(mq-m-l) {
+        --btn-icon-size: min(max(3.125rem, 100vw), 5rem);
+    }
+
+    @include rwd(mq-l) {
+        &:hover {
+            background-color: $clr-white;
+            color: $clr-prime;
+        }
+
+        &:active {
+            background-color: $clr-prime-light;
+            color: $clr-prime;
+            border: .4rem solid $clr-white;
+        }
+    }
+}
+
+
+/* L A Y O U T   M I X I N S */
+// Standard Flexbox
+@mixin flex ($flex-direction: row, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+// MixIns for general Boxes and Cards on all Subpages
+@mixin pagebox--mixin {
+    border-radius: $infobox__border-radius;
+}
+@mixin pagebox--hover {
+    @include rwd(mq-l) {
+        &:hover {
+            box-shadow: $box-shadow__hover;
+            & > .infobox__headline > .infobox__more--de::after {
+                color: $clr-contrast;
+            }
+            & .infobox__img {
+                box-shadow: .05rem 0 .5rem .5rem $clr-contrast-tr;
+            }
+        }
+    }
+}
