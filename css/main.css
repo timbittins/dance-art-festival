@@ -8,7 +8,7 @@
   --clr-prime-light: #fff9b3;
   --clr-contrast: #19d0ff;
   --clr-contrast-tr: rgba(#19d0ff, 0.25);
-  --clr-grey-dark: #222222;
+  --clr-grey-dark: #1a1818;
   --clr-grey-dark-tr: rgba(34, 34, 34, 0.6);
   --clr-grey-medium: #999999;
   --clr-grey-medium-tr: rgba(153, 153, 153, 0.5);
@@ -1322,8 +1322,7 @@ body {
   left: 0;
   width: 100vw;
   min-height: 100vh;
-  background: var(--clr-black) url(../../img/daf_bg_main.webp) fixed;
-  background-color: #fff;
+  background: var(--clr-grey-dark);
 }
 
 /* L A N D I N G    P A G E  */
@@ -1345,25 +1344,25 @@ body {
   margin: 0;
   color: var(--clr-prime);
 }
-.container__headline .headline__h1 {
+.container__headline .headline__display {
   margin: 10vh 0;
   font-family: isidora-medium, sans-serif;
   font-size: 8rem;
   letter-spacing: 0.01em;
   line-height: 0.9;
 }
-.container__headline .headline__h2 {
+.container__headline .headline__h1 {
   line-height: 1.4;
 }
 @media (min-width: 30em) and (orientation: landscape) {
   .container__headline {
     padding: 0 0 0 25vw;
   }
-  .container__headline .headline__h1 {
+  .container__headline .headline__display {
     margin: 5vh 0;
     font-size: 7rem;
   }
-  .container__headline .headline__h2 {
+  .container__headline .headline__h1 {
     font-size: 2.2rem;
   }
 }
@@ -1371,11 +1370,11 @@ body {
   .container__headline {
     padding: 0 20vw;
   }
-  .container__headline .headline__h1 {
+  .container__headline .headline__display {
     margin: 18vh 0 8vh;
     font-size: 13rem;
   }
-  .container__headline .headline__h2 {
+  .container__headline .headline__h1 {
     font-size: 3.5rem;
   }
 }
@@ -1383,11 +1382,11 @@ body {
   .container__headline {
     padding: 0 0 0 25vw;
   }
-  .container__headline .headline__h1 {
+  .container__headline .headline__display {
     margin: 18vh 0 8vh;
     font-size: 13rem;
   }
-  .container__headline .headline__h2 {
+  .container__headline .headline__h1 {
     font-size: 3.5rem;
   }
 }
@@ -1395,11 +1394,11 @@ body {
   .container__headline {
     padding: 0;
   }
-  .container__headline .headline__h1 {
+  .container__headline .headline__display {
     margin: 3vh 0;
     font-size: 13rem;
   }
-  .container__headline .headline__h2 {
+  .container__headline .headline__h1 {
     line-height: 0;
     font-size: 4.5rem;
     text-align: right;

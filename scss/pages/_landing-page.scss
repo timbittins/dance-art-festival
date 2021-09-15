@@ -18,7 +18,7 @@
         color: $clr-prime;
     }
 
-    .headline__h1 {
+    .headline__display {
         margin: 10vh 0;
         font-family: isidora-medium, sans-serif;
         font-size: 8rem;
@@ -26,19 +26,19 @@
         line-height: .9;
     }
 
-    .headline__h2 {
+    .headline__h1 {
         line-height: 1.4;
     }
 
     @include rwd(mq-s-l) {
         padding: 0 0 0 25vw;
 
-        .headline__h1 {
+        .headline__display {
             margin: 5vh 0;
             font-size: 7rem;
         }
 
-        .headline__h2 {
+        .headline__h1 {
             font-size: 2.2rem;
         }
     }
@@ -46,12 +46,12 @@
     @include rwd(mq-m-p) {
         padding: 0 20vw;
 
-        .headline__h1 {
+        .headline__display {
             margin: 18vh 0 8vh;
             font-size: 13rem;
         }
 
-        .headline__h2 {
+        .headline__h1 {
             font-size: 3.5rem;
         }
     }
@@ -59,12 +59,12 @@
     @include rwd(mq-m-l) {
         padding: 0 0 0 25vw;
 
-        .headline__h1 {
+        .headline__display {
             margin: 18vh 0 8vh;
             font-size: 13rem;
         }
 
-        .headline__h2 {
+        .headline__h1 {
             font-size: 3.5rem;
         }
     }
@@ -72,12 +72,12 @@
     @include rwd(mq-l) {
         padding: 0;
 
-        .headline__h1 {
+        .headline__display {
             margin: 3vh 0;
             font-size: 13rem;
         }
 
-        .headline__h2 {
+        .headline__h1 {
             line-height: 0;
             font-size: 4.5rem;
             text-align: right;
