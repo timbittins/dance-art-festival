@@ -47,11 +47,11 @@
 WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT: 
 ---------------         ------------------------        ----------
 < 700px (43.75em)       small devices portrait          default
-> 480px (30em)        small devices landscape         mq-s-l
+> 480px (30em)          small devices landscape         mq-s-l
 > 700px (43.75em)       medium devices portrait         mq-m-p  
 > 900px (56.25em)       medium devices landscape        mq-m-l
 > 1050px (65.625em)     large devices                   mq-l
-> 1540px (96.25em)         extra large devices             mq-xl
+> 1540px (96.25em)      extra large devices             mq-xl
 */
 /*  M Q   M I X I N  */
 /* COLORS */
@@ -810,6 +810,7 @@ body {
   left: 0;
   width: 100vw;
   height: auto;
+  background-color: red;
 }
 .menu label {
   position: fixed;
@@ -1322,6 +1323,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   background: var(--clr-black) url(../../img/daf_bg_main.webp) fixed;
+  background-color: #fff;
 }
 
 /* L A N D I N G    P A G E  */
