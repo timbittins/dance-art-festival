@@ -6,7 +6,16 @@ html {
     color: $clr-white;
 }
 
-
+.main__h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+// p,
+figcaption {
+    margin: 1em 3rem 0;
+}
 
 $fs__h1: var(--fs-h1);
 
@@ -68,15 +77,7 @@ figcaption {
     letter-spacing: 0.2rem;
 }
 
-.main__h1,
-h1,
-h2,
-h3,
-h4,
-p,
-figcaption {
-    margin: 1em 3rem 0;
-}
+
 
 
 

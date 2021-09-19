@@ -35,9 +35,10 @@
     // Buttons
     --button-lines__padding: min(max(.8rem, 1vw), 1.1rem);
 
-    --infobox__width: min(max(30rem, 70vw), 100rem);
-    --infobox__border-radius: min(max(2rem, 4vw), 7rem);
-    --infobox__headline-padding: 1vw 6vw;
+    --card__width: min(max(30rem, 90vw), 100rem);
+    --card__border: .2rem solid var(--clr-prime);
+    --card__border-radius: min(max(2rem, 4vw), 7rem);
+    --card__headline-padding: 1vw 6vw;
 
 
     /* G U E S T B O X E S */
@@ -51,4 +52,7 @@
     /* S T Y L E S */
     --box-shadow__hover: 0 0 0 .4rem var(--clr-contrast);
 
+    --transition: all 300ms ease-in-out;
 }
+
+

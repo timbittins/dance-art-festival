@@ -2,26 +2,25 @@
 console.log("JS Start check");
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-const menuListItems = [...document.getElementsByClassName('menu__link')];
-const removeClassFromMenuList = () => menuListItems.forEach(menuListItem => {
-  menuListItem.classList.remove('current');
-});
+const menuListItems = [...document.getElementsByClassName("menu__link")];
+const removeClassFromMenuList = () =>
+  menuListItems.forEach((menuListItem) => {
+    menuListItem.classList.remove("current");
+  });
 
-
-
-// M E N U 
-  // Landing Page Load
+// M E N U
+// Landing Page Load
 var req = new XMLHttpRequest();
-  req.onreadystatechange = processResponse;
-  req.open("GET", "pages/home.html");
-  req.send();
+req.onreadystatechange = processResponse;
+req.open("GET", "pages/home.html");
+req.send();
 
-  function processResponse() {
-    if (req.readyState != 4) return; // State 4 is DONE
-    document.getElementById("main__website").innerHTML = req.responseText;
-  }
+function processResponse() {
+  if (req.readyState != 4) return; // State 4 is DONE
+  document.getElementById("main__website").innerHTML = req.responseText;
+}
 
-  // Subpages Load
+// Subpages Load
 function requestHome() {
   removeClassFromMenuList("menu__link");
   var req = new XMLHttpRequest();
@@ -35,7 +34,7 @@ function requestHome() {
   }
 }
 
-function requestNews() {  
+function requestNews() {
   removeClassFromMenuList("menu__link");
   document.getElementById("news").classList.add("current");
   var req = new XMLHttpRequest();
@@ -46,7 +45,6 @@ function requestNews() {
   function processResponse() {
     if (req.readyState != 4) return; // State 4 is DONE
     document.getElementById("main__website").innerHTML = req.responseText;
-    
   }
 }
 
@@ -133,36 +131,3 @@ function requestPrivacy() {
     document.getElementById("main__website").innerHTML = req.responseText;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // TO TOP BUTTON
-  const toTopButton = document.getElementById("toTopButton");
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      toTopButton.style.display = "flex";
-    } else {
-      toTopButton.style.display = "none";
-    }
-  }
-
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
