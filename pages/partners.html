@@ -1,3 +1,256 @@
+<!DOCTYPE html>
+<html lang="en de">
+  <head>
+    <!--DEV STATUS-->
+    <meta name="robots" content="noindex nofollow" />
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Urban Dance Event" />
+    <meta
+      name="keywords"
+      content="Urban Dance, Battle, Workshop, Jam, Popping, Hiphop"
+    />
+    <meta name="author" content="Tim Bittins" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dance Art festival</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- <script src="js/menu.js"></script> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../img/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <input type="radio" id="english" name="language" value="english" />
+    <input type="radio" id="german" name="language" value="german" checked />
+
+    <header class="header__main">
+      <nav>
+        <input type="checkbox" name="navigation switch" id="navigation" />
+        <label for="navigation">
+          <div class="menu__button menu__icon--big">
+            <div class="menu__button--lines"></div>
+          </div>
+        </label>
+
+        <div class="menu">
+          <div class="menu__container">
+            <ul class="menu__bar--home">
+              <li>
+                <a href="../index.html" id="home" onclick="requestHome()"
+                  ><img
+                    class="menu__icon--big daf-logo"
+                    src="../img/daf_logo.svg"
+                    alt="Dance Art festival Logo"
+                /></a>
+              </li>
+            </ul>
+            <div class="menu__bar">
+              <ul class="menu__bar--privacy">
+                <li>
+                  <a
+                    href="./impressum.html"
+                    id="impressum"
+                    class="menu__link"
+                    onclick="requestImpressum()"
+                    ><p>Impressum</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy.html"
+                    id="datenschutz"
+                    class="menu__link"
+                    onclick="requestPrivacy()"
+                    ><p lang="de">Datenschutz</p>
+                    <p lang="en">Privacy</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="menu__bar--pages">
+                <li>
+                  <a
+                    href="./news.html"
+                    id="news"
+                    class="menu__link"
+                    onclick="requestNews()"
+                    ><p>News</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./guests.html"
+                    id="guests"
+                    class="menu__link"
+                    onclick="requestGuests()"
+                    ><p lang="de">Gäste</p>
+                    <p lang="en">Guests</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./fotos.html"
+                    id="fotos"
+                    class="menu__link"
+                    onclick="requestFotos()"
+                    ><p lang="de">Fotos</p>
+                    <p lang="en">Photos</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./videos.html"
+                    id="videos"
+                    class="menu__link"
+                    onclick="requestVideos()"
+                    ><p>Videos</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./partners.html"
+                    id="partners"
+                    class="menu__link"
+                    onclick="requestPartners()"
+                    ><p>Partner</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="menu__bar--social-media">
+                <li>
+                  <a
+                    href="https://www.instagram.com/danceartfestival/"
+                    target="_blank"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_ig.svg"
+                      alt="Instagram Icon"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/danceartfestivalberlin/"
+                    target="_blank"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_fb.svg"
+                      alt="Facebook icon"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCP3_DFvPQdP9XABAeD2XtTQ"
+                    target="_blank"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_yt.svg"
+                      alt="Youtube icon"
+                  /></a>
+                </li>
+                <li>
+                  <a href="mailto:info@dance-art-festival.com"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_mail.svg"
+                      alt="Email icon"
+                  /></a>
+                </li>
+              </ul>
+              <div class="menu__bar--languages">
+                <label for="english">
+                  <img
+                    data-category="language__english"
+                    class="menu__icon--small"
+                    src="../img/lang_en.svg"
+                    alt="englisch"
+                  />
+                </label>
+
+                <label for="german">
+                  <img
+                    data-category="language__german"
+                    class="menu__icon--small"
+                    src="../img/lang_de.svg"
+                    alt="deutsch"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
 <section id="main__website">
     <div class="pages__header">
         <h2 class="pages__h2">Partner</h2>
@@ -15,3 +268,19 @@
     </div>
 </section>
 
+      <div
+        class="up-to-top__button"
+        onclick="topFunction()"
+        id="toTopButton"
+        title="to top"
+      >
+        <div class="up-to-top__button--arrow"></div>
+      </div>
+    </main>
+
+    <script>
+      console.log(window.innerWidth);
+    </script>
+    <script async defer src="../js/app.js"></script>
+  </body>
+</html>

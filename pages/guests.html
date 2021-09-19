@@ -1,439 +1,873 @@
-<section id="main__website">
-    <div class="pages__header">
-        <h2 class="pages__h2" lang="de">Gäste</h2>
-        <h2 class="pages__h2" lang="en">Guests</h2>
-    </div>
-    
+<!DOCTYPE html>
+<html lang="en de">
+  <head>
+    <!--DEV STATUS-->
+    <meta name="robots" content="noindex nofollow" />
 
-    <div class="pages__content">
-        
-<!--* GUEST 1 ALEKS -->    
-        <article class="pages__infobox">
-        
-    <!--* Guest 1 Header -->
-            <input type="checkbox" name="infobox switch" class="pagebox__checkbox" id="infoboxSwitch_1">
-            <label class="infobox__label" for="infoboxSwitch_1">
-                <section class="infobox__container">
-                    <img class="infobox__img" src="../img/guests_portrait_aleks.webp" alt="Picture of Aleks">
-                    
-                    <div class="infobox__headline">
-                        <h3 class="infobox__h3">B-Boy Äleks</h3>
-                                        
-                        <h5 class="infobox__more--de" lang="de"></h5>
-                        <h5 class="infobox__more--en" lang="en"></h5>                        
-                    </div>
-                </section>
-            </label>
-    
-    <!--* Guest 1 Content -->
-            <section class="infobox__content">
-    
-        <!--* Guest 1 Info -->
-            <div class="guestbox">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Urban Dance Event" />
+    <meta
+      name="keywords"
+      content="Urban Dance, Battle, Workshop, Jam, Popping, Hiphop"
+    />
+    <meta name="author" content="Tim Bittins" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dance Art festival</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- <script src="js/menu.js"></script> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../img/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxAlex_1">
-                <label class="guestbox__label" for="guestboxAlex_1">
-                    <section class="guestbox__container">
+  <body>
+    <input type="radio" id="english" name="language" value="english" />
+    <input type="radio" id="german" name="language" value="german" checked />
 
-                        <h4 class="guestbox__h4" lang="de">Infos über Äleks</h4>
-                        <h4 class="guestbox__h4" lang="en">Infos about Äleks</h4>
-                        <div class="guestbox__arrow"></div>
+    <header class="header__main">
+      <nav>
+        <input type="checkbox" name="navigation switch" id="navigation" />
+        <label for="navigation">
+          <div class="menu__button menu__icon--big">
+            <div class="menu__button--lines"></div>
+          </div>
+        </label>
 
-                    </section>
+        <div class="menu">
+          <div class="menu__container">
+            <ul class="menu__bar--home">
+              <li>
+                <a href="../index.html" id="home" onclick="requestHome()"
+                  ><img
+                    class="menu__icon--big daf-logo"
+                    src="../img/daf_logo.svg"
+                    alt="Dance Art festival Logo"
+                /></a>
+              </li>
+            </ul>
+            <div class="menu__bar">
+              <ul class="menu__bar--privacy">
+                <li>
+                  <a
+                    href="./impressum.html"
+                    id="impressum"
+                    class="menu__link"
+                    onclick="requestImpressum()"
+                    ><p>Impressum</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy.html"
+                    id="datenschutz"
+                    class="menu__link"
+                    onclick="requestPrivacy()"
+                    ><p lang="de">Datenschutz</p>
+                    <p lang="en">Privacy</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="menu__bar--pages">
+                <li>
+                  <a
+                    href="./news.html"
+                    id="news"
+                    class="menu__link"
+                    onclick="requestNews()"
+                    ><p>News</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./guests.html"
+                    id="guests"
+                    class="menu__link"
+                    onclick="requestGuests()"
+                    ><p lang="de">Gäste</p>
+                    <p lang="en">Guests</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./fotos.html"
+                    id="fotos"
+                    class="menu__link"
+                    onclick="requestFotos()"
+                    ><p lang="de">Fotos</p>
+                    <p lang="en">Photos</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./videos.html"
+                    id="videos"
+                    class="menu__link"
+                    onclick="requestVideos()"
+                    ><p>Videos</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./partners.html"
+                    id="partners"
+                    class="menu__link"
+                    onclick="requestPartners()"
+                    ><p>Partner</p></a
+                  >
+                </li>
+              </ul>
+              <ul class="menu__bar--social-media">
+                <li>
+                  <a
+                    href="https://www.instagram.com/danceartfestival/"
+                    target="_blank"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_ig.svg"
+                      alt="Instagram Icon"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/danceartfestivalberlin/"
+                    target="_blank"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_fb.svg"
+                      alt="Facebook icon"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCP3_DFvPQdP9XABAeD2XtTQ"
+                    target="_blank"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_yt.svg"
+                      alt="Youtube icon"
+                  /></a>
+                </li>
+                <li>
+                  <a href="mailto:info@dance-art-festival.com"
+                    ><img
+                      data-category="social__link"
+                      class="menu__icon--small"
+                      src="../img/sm_mail.svg"
+                      alt="Email icon"
+                  /></a>
+                </li>
+              </ul>
+              <div class="menu__bar--languages">
+                <label for="english">
+                  <img
+                    data-category="language__english"
+                    class="menu__icon--small"
+                    src="../img/lang_en.svg"
+                    alt="englisch"
+                  />
                 </label>
-                <div class="guestbox__content">
-                    <p class="guestbox__text" lang="de">Äleks ist seit 2008 in der Breaking-Szene aktiv und repräsentiert die Flowjob Crew Germany. Mit seinen Seelenverwandten war er bereits beim BOTY, bei IBE und vielen anderen. 2016 gewann er das „One on One“ beim „Battle of the Year Germany“.<br>
-                        In den letzten sieben Jahren hat er sich tiefgehend mit der Kultur befasst: er liest Literatur zu Hip Hop Studien, organisierte Gremien für das IBE 2013, startete das interkulturelle Gruppenprojekt „Break Grenzen“, organisierte 20 Jams in seiner Heimatstadt und wurde Tanzpädagoge in einem lokalen Jugendhausprojekt in Magdeburg.<br><br>
-                        Mit seiner Entwicklung als MC und seiner arbeit an einer LP setzte er sich tiefer mit Hip Hop Grooves auseinander und hat so eine Leidenschaft sich in Hip Hop-Grooves auszudrücken in sein Breaking übertragen. </p>
-                    <p class="guestbox__text" lang="en">Representing Flowjob Crew Germany, Äleks has been active in the Breaking scene since 2008. With his soulmates he represented on stage at the BOTY, IBE and many more. 2016 he took the W at the one on one at Battle of the Year Germany.<br>
-                        For the last seven years he has been digging deeper in the culture: read literature in the field of Hip Hop studies, organized panels at the IBE 2013, launched an intercultural Crew Project "Break Grenzen", organized 20 Jams in his hometown and became a dance pedagogue at a local youthhouse project in Magdeburg.<br><br>
-                        With his development as an MC and his working on an LP he got more into Hip Hop Grooves, dedicating his passion to express an hip hop groove-approach in Breaking. </p>
-                </div>
+
+                <label for="german">
+                  <img
+                    data-category="language__german"
+                    class="menu__icon--small"
+                    src="../img/lang_de.svg"
+                    alt="deutsch"
+                  />
+                </label>
+              </div>
             </div>
-    
-        <!--* Guest 1 Contact -->
-            <div class="guestbox">
-    
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxAlex_2">
-                <label class="guestbox__label" for="guestboxAlex_2">
-                    <section class="guestbox__container">
-    
-                        <h4 class="guestbox__h4" lang="de">Kontakt zu Äleks</h4>
-                        <h4 class="guestbox__h4" lang="en">Connect with Äleks</h4>
-                        <div class="guestbox__arrow"></div>
-    
-                    </section>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="main__website">
+        <div class="pages__header">
+          <h2 class="pages__h2" lang="de">Gäste</h2>
+          <h2 class="pages__h2" lang="en">Guests</h2>
+        </div>
+
+        <div class="pages__content">
+          <!--* GUEST 1 ALEKS -->
+          <article class="pages__infobox">
+            <!--* Guest 1 Header -->
+            <input
+              type="checkbox"
+              name="infobox switch"
+              class="pagebox__checkbox"
+              id="infoboxSwitch_1"
+            />
+            <label class="infobox__label" for="infoboxSwitch_1">
+              <section class="infobox__container">
+                <img
+                  class="infobox__img"
+                  src="../img/guests_portrait_aleks.webp"
+                  alt="Picture of Aleks"
+                />
+
+                <div class="infobox__headline">
+                  <h3 class="infobox__h3">B-Boy Äleks</h3>
+
+                  <h5 class="infobox__more--de" lang="de"></h5>
+                  <h5 class="infobox__more--en" lang="en"></h5>
+                </div>
+              </section>
+            </label>
+
+            <!--* Guest 1 Content -->
+            <section class="infobox__content">
+              <!--* Guest 1 Info -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxAlex_1"
+                />
+                <label class="guestbox__label" for="guestboxAlex_1">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Infos über Äleks</h4>
+                    <h4 class="guestbox__h4" lang="en">Infos about Äleks</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
                 </label>
                 <div class="guestbox__content">
-                    <div class="guestbox__contact">
-    
-                        <!--* <a href="https://www.instagram.com/aleksflowjob" target="_blank" class="guest__link">
+                  <p class="guestbox__text" lang="de">
+                    Äleks ist seit 2008 in der Breaking-Szene aktiv und
+                    repräsentiert die Flowjob Crew Germany. Mit seinen
+                    Seelenverwandten war er bereits beim BOTY, bei IBE und
+                    vielen anderen. 2016 gewann er das „One on One“ beim „Battle
+                    of the Year Germany“.<br />
+                    In den letzten sieben Jahren hat er sich tiefgehend mit der
+                    Kultur befasst: er liest Literatur zu Hip Hop Studien,
+                    organisierte Gremien für das IBE 2013, startete das
+                    interkulturelle Gruppenprojekt „Break Grenzen“, organisierte
+                    20 Jams in seiner Heimatstadt und wurde Tanzpädagoge in
+                    einem lokalen Jugendhausprojekt in Magdeburg.<br /><br />
+                    Mit seiner Entwicklung als MC und seiner arbeit an einer LP
+                    setzte er sich tiefer mit Hip Hop Grooves auseinander und
+                    hat so eine Leidenschaft sich in Hip Hop-Grooves
+                    auszudrücken in sein Breaking übertragen.
+                  </p>
+                  <p class="guestbox__text" lang="en">
+                    Representing Flowjob Crew Germany, Äleks has been active in
+                    the Breaking scene since 2008. With his soulmates he
+                    represented on stage at the BOTY, IBE and many more. 2016 he
+                    took the W at the one on one at Battle of the Year
+                    Germany.<br />
+                    For the last seven years he has been digging deeper in the
+                    culture: read literature in the field of Hip Hop studies,
+                    organized panels at the IBE 2013, launched an intercultural
+                    Crew Project "Break Grenzen", organized 20 Jams in his
+                    hometown and became a dance pedagogue at a local youthhouse
+                    project in Magdeburg.<br /><br />
+                    With his development as an MC and his working on an LP he
+                    got more into Hip Hop Grooves, dedicating his passion to
+                    express an hip hop groove-approach in Breaking.
+                  </p>
+                </div>
+              </div>
+
+              <!--* Guest 1 Contact -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxAlex_2"
+                />
+                <label class="guestbox__label" for="guestboxAlex_2">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Kontakt zu Äleks</h4>
+                    <h4 class="guestbox__h4" lang="en">Connect with Äleks</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
+                </label>
+                <div class="guestbox__content">
+                  <div class="guestbox__contact">
+                    <!--* <a href="https://www.instagram.com/aleksflowjob" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_web.svg" alt="Homepage Icon">
                                 <p>Homepage</p>
                             </button>
                         </a> -->
-    
-                        <!--* <a href="mailto:aleks@example.com" target="_blank" class="guest__link">
+
+                    <!--* <a href="mailto:aleks@example.com" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_mail.svg" alt="Email Icon">
                                 <p>Email</p>
                             </button>
                         </a> -->
-    
-                        <a href="https://www.instagram.com/aleksflowjob" target="_blank" class="guest__link">
-                            <button class="button__ghost button__and-icon">
-                                <img class="button__link-icon" src="img/icon_ig.svg" alt="Instagram Icon">
-                                <p>Instagram</p>
-                            </button>
-                        </a>
-    
-                        <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
-                            <button class="button__ghost button__and-icon">
-                                <img class="button__link-icon" src="img/icon_fb.svg" alt="Facebook Icon">
-                                <p>Facebook</p>
-                            </button>
-                        </a>
-    
-                        <!--* <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
+
+                    <a
+                      href="https://www.instagram.com/aleksflowjob"
+                      target="_blank"
+                      class="guest__link"
+                    >
+                      <button class="button__ghost button__and-icon">
+                        <img
+                          class="button__link-icon"
+                          src="../img/icon_ig.svg"
+                          alt="Instagram Icon"
+                        />
+                        <p>Instagram</p>
+                      </button>
+                    </a>
+
+                    <a
+                      href="https://www.facebook.com/intelekz"
+                      target="_blank"
+                      class="guest__link"
+                    >
+                      <button class="button__ghost button__and-icon">
+                        <img
+                          class="button__link-icon"
+                          src="../img/icon_fb.svg"
+                          alt="Facebook Icon"
+                        />
+                        <p>Facebook</p>
+                      </button>
+                    </a>
+
+                    <!--* <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_yt.svg" alt="Youtube Icon">
                                 <p>Youtube</p>
                             </button>
                         </a> -->
-                        
-                        
-                    </div>
+                  </div>
                 </div>
-            </div>
-    
-        <!--* Guest 1 Fotos -->
-            <div class="guestbox">
-    
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxAlex_3">
+              </div>
+
+              <!--* Guest 1 Fotos -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxAlex_3"
+                />
                 <label class="guestbox__label" for="guestboxAlex_3">
-                    <section class="guestbox__container">
-    
-                        <h4 class="guestbox__h4" lang="de">Fotos von Äleks</h4>
-                        <h4 class="guestbox__h4" lang="en">Pictures of Äleks</h4>
-                        <div class="guestbox__arrow"></div>
-    
-                    </section>
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Fotos von Äleks</h4>
+                    <h4 class="guestbox__h4" lang="en">Pictures of Äleks</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
                 </label>
                 <div class="guestbox__content">
-    
-                    <div class="guestbox__fotos">
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_aleks_01.webp" alt="Aleks on stage">
-                        </div>
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_aleks_02.webp" alt="Aleks is posing">
-                        </div>
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_aleks_03.webp" alt="Aleks is dancing">
-                        </div>
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_aleks_04.webp" alt="Aleks in a freeze">
-                        </div>
-                    </div>    
-                </div>
-            </div>
-    
-        <!--* Guest 1 Videos -->
-            <div class="guestbox">
-        
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxAlex_4">
-                <label class="guestbox__label" for="guestboxAlex_4">
-                    <section class="guestbox__container">
-        
-                        <h4 class="guestbox__h4" lang="de">Videos von Äleks</h4>
-                        <h4 class="guestbox__h4" lang="en">Videos of Äleks</h4>
-                        <div class="guestbox__arrow"></div>
-        
-                    </section>
-                </label>
-                <div class="guestbox__content">
-                    <input type="checkbox" name="video agreement" class="video__checkbox" id="videoCheckAlex">     
-                    <div class="video__agreement">    
-                        <label for="videoCheckAlex" class="video__label">
-                            <p class="video__agreetext"  lang="de">Klicke hier, um der Nutzung von Youtube zuzustimmen.</p>
-                            <p class="video__agreetext" lang="en">Check the box to accept the privacy terms from Youtube.</p>
-                        </label>
+                  <div class="guestbox__fotos">
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_aleks_01.webp"
+                        alt="Aleks on stage"
+                      />
                     </div>
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_aleks_02.webp"
+                        alt="Aleks is posing"
+                      />
+                    </div>
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_aleks_03.webp"
+                        alt="Aleks is dancing"
+                      />
+                    </div>
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_aleks_04.webp"
+                        alt="Aleks in a freeze"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <!--* Guest 1 Videos -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxAlex_4"
+                />
+                <label class="guestbox__label" for="guestboxAlex_4">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Videos von Äleks</h4>
+                    <h4 class="guestbox__h4" lang="en">Videos of Äleks</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
+                </label>
+                <div class="guestbox__content">
+                  <input
+                    type="checkbox"
+                    name="video agreement"
+                    class="video__checkbox"
+                    id="videoCheckAlex"
+                  />
+                  <div class="video__agreement">
+                    <label for="videoCheckAlex" class="video__label">
+                      <p class="video__agreetext" lang="de">
+                        Klicke hier, um der Nutzung von Youtube zuzustimmen.
+                      </p>
+                      <p class="video__agreetext" lang="en">
+                        Check the box to accept the privacy terms from Youtube.
+                      </p>
+                    </label>
+                  </div>
 
-                    <div class="guestbox__videos">
-
-                        <h5>Äleks Freestyle</h5>
-                        <div class="videobox">
-                            <div class="video__blocker">
-                                <p class="video__blocker--text" lang="de">Erst zustimmen</p>
-                                <p class="video__blocker--text" lang="en">First accept</p>
-                            </div>
-                            <iframe class="guestbox__videos--iframe" 
-                                src="https://www.youtube.com/embed/-LuUFH-VuKg" 
-                                title="Alex Freestyle - Dance Performance" 
-                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                  <div class="guestbox__videos">
+                    <h5>Äleks Freestyle</h5>
+                    <div class="videobox">
+                      <div class="video__blocker">
+                        <p class="video__blocker--text" lang="de">
+                          Erst zustimmen
+                        </p>
+                        <p class="video__blocker--text" lang="en">
+                          First accept
+                        </p>
+                      </div>
+                      <iframe
+                        class="guestbox__videos--iframe"
+                        src="https://www.youtube.com/embed/-LuUFH-VuKg"
+                        title="Alex Freestyle - Dance Performance"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
                                         <a href=https://www.youtube.com/embed/-LuUFH-VuKg?autoplay=1>
                                         <img src=https://i.ytimg.com/vi/-LuUFH-VuKg/hqdefault.jpg alt='Video of Aleks performing a fresstyle.'><span>▶</span></a>"
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>     
-                        </div>
-                        
-                        <h5>Äleks vs Loopi Battle</h5>
-                        <div class="videobox">
-                            <div class="video__blocker">
-                                <p class="video__blocker--text" lang="en">First accept</p>
-                                <p class="video__blocker--text" lang="de">Erst zustimmen</p>
-                            </div>                    
-                            <iframe class="guestbox__videos--iframe" 
-                                src="https://www.youtube.com/embed/7s3WT4C_WU8"
-                                title="Alex vs Loopi - Dance Battle" 
-                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
+
+                    <h5>Äleks vs Loopi Battle</h5>
+                    <div class="videobox">
+                      <div class="video__blocker">
+                        <p class="video__blocker--text" lang="en">
+                          First accept
+                        </p>
+                        <p class="video__blocker--text" lang="de">
+                          Erst zustimmen
+                        </p>
+                      </div>
+                      <iframe
+                        class="guestbox__videos--iframe"
+                        src="https://www.youtube.com/embed/7s3WT4C_WU8"
+                        title="Alex vs Loopi - Dance Battle"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
                                         <a href=https://www.youtube.com/embed/7s3WT4C_WU8?autoplay=1>
                                         <img src=https://i.ytimg.com/vi/7s3WT4C_WU8/hqdefault.jpg alt='Video of battle Aleks versus Loopi'><span>▶</span></a>"
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
 
-                        <h5>Äleks & Loopi Interview</h5>
-                        <div class="videobox">
-                            <div class="video__blocker">
-                                <p class="video__blocker--text" lang="de">Erst zustimmen</p>
-                                <p class="video__blocker--text" lang="en">First accept</p>
-                            </div>
-                            <iframe class="guestbox__videos--iframe" 
-                                src="https://www.youtube.com/embed/hfvPvrnEcUs" 
-                                title="Alex and Loopi - Interview" 
-                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                    <h5>Äleks & Loopi Interview</h5>
+                    <div class="videobox">
+                      <div class="video__blocker">
+                        <p class="video__blocker--text" lang="de">
+                          Erst zustimmen
+                        </p>
+                        <p class="video__blocker--text" lang="en">
+                          First accept
+                        </p>
+                      </div>
+                      <iframe
+                        class="guestbox__videos--iframe"
+                        src="https://www.youtube.com/embed/hfvPvrnEcUs"
+                        title="Alex and Loopi - Interview"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
                                         <a href=https://www.youtube.com/embed/hfvPvrnEcUs?autoplay=1>
                                         <img src=https://i.ytimg.com/vi/hfvPvrnEcUs/hqdefault.jpg alt='Video of interview with Aleks and Loopi'><span>▶</span></a>"
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
                     </div>
-        
+                  </div>
                 </div>
-            </div>
-    
-            </section>           
-        </article>
-        
-<!--* GUEST 2 DALIL-->        
-        <article class="pages__infobox">
+              </div>
+            </section>
+          </article>
 
-    <!--* Guest 2 Header -->
-            <input type="checkbox" name="infobox switch" class="pagebox__checkbox" id="infoboxSwitch_2">
+          <!--* GUEST 2 DALIL-->
+          <article class="pages__infobox">
+            <!--* Guest 2 Header -->
+            <input
+              type="checkbox"
+              name="infobox switch"
+              class="pagebox__checkbox"
+              id="infoboxSwitch_2"
+            />
             <label class="infobox__label" for="infoboxSwitch_2">
-                <section class="infobox__container">
-                    <img class="infobox__img" src="../img/guests_portrait_dalil.webp" alt="Picture of Dalil">
-                    
-                    <div class="infobox__headline">
-                        <h3 class="infobox__h3">Dalil Wave</h3>
-                                        
-                        <h5 class="infobox__more--de" lang="de"></h5>
-                        <h5 class="infobox__more--en" lang="en"></h5>                        
-                    </div>
-                </section>
-            </label>
-    
-    <!--* Guest 2 Content -->            
-            <section class="infobox__content">
-    
-        <!--* Guest 2 Info -->
-            <div class="guestbox">
+              <section class="infobox__container">
+                <img
+                  class="infobox__img"
+                  src="../img/guests_portrait_dalil.webp"
+                  alt="Picture of Dalil"
+                />
 
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxDalil_1">
-                <label class="guestbox__label" for="guestboxDalil_1">
-                    <section class="guestbox__container">
+                <div class="infobox__headline">
+                  <h3 class="infobox__h3">Dalil Wave</h3>
 
-                        <h4 class="guestbox__h4" lang="de">Infos über Dalil</h4>
-                        <h4 class="guestbox__h4" lang="en">Infos about Dalil</h4>
-                        <div class="guestbox__arrow"></div>
-
-                    </section>
-                </label>
-                <div class="guestbox__content">
-                    <p class="guestbox__text" lang="de">Dalil Wave ist ein Popping-Tänzer, der Marokko als auch Deutschland repräsentiert.
-                        Als Mitglied der "DoOnlyGood" Fam und den "Funkadelikz" nahm er erfolgreich an zahlreichen Battles teil wie "Juste Debout Germany", "Free Spirit Festival" oder "KOD China".<br><br>
-                        Neben den Battles ist er auch auf Theaterbühnen wie dem "Schauspielhaus Bochum" oder dem "Tanzhaus NRW" zu sehen.<br><br>
-                        Außerdem ist er Popping-Tanzlehrer und gibt sein Wissen an die nächste Generation weiter. </p>
-                    <p class="guestbox__text" lang="en">Dalil Wave is a popping dancer representing both, Morocco and Germany.
-                        As a member of the "DoOnlyGood" Fam and the "Funkadelikz" he took part and won numerous battles such as "Juste Debout Germany", "Free Spirit Festival" or "KOD China".<br><br>
-                        Besides his involvement in the battle scene he is also rocking theatre stages like "Schauspielhaus Bochum" or "Tanzhaus NRW".<br><br>
-                        Also he is teaching Popping and passes on his knowledge to the next generation. </p>
+                  <h5 class="infobox__more--de" lang="de"></h5>
+                  <h5 class="infobox__more--en" lang="en"></h5>
                 </div>
-            </div>
-    
-        <!--* Guest 2 Contact -->
-            <div class="guestbox">
-    
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxDalil_2">
-                <label class="guestbox__label" for="guestboxDalil_2">
-                    <section class="guestbox__container">
-    
-                        <h4 class="guestbox__h4" lang="de">Kontakt zu Dalil</h4>
-                        <h4 class="guestbox__h4" lang="en">Connect with Dalil</h4>
-                        <div class="guestbox__arrow"></div>
-    
-                    </section>
+              </section>
+            </label>
+
+            <!--* Guest 2 Content -->
+            <section class="infobox__content">
+              <!--* Guest 2 Info -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxDalil_1"
+                />
+                <label class="guestbox__label" for="guestboxDalil_1">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Infos über Dalil</h4>
+                    <h4 class="guestbox__h4" lang="en">Infos about Dalil</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
                 </label>
                 <div class="guestbox__content">
-                    <div class="guestbox__contact">
-    
-                        <!--* <a href="https://www.instagram.com/aleksflowjob" target="_blank" class="guest__link">
+                  <p class="guestbox__text" lang="de">
+                    Dalil Wave ist ein Popping-Tänzer, der Marokko als auch
+                    Deutschland repräsentiert. Als Mitglied der "DoOnlyGood" Fam
+                    und den "Funkadelikz" nahm er erfolgreich an zahlreichen
+                    Battles teil wie "Juste Debout Germany", "Free Spirit
+                    Festival" oder "KOD China".<br /><br />
+                    Neben den Battles ist er auch auf Theaterbühnen wie dem
+                    "Schauspielhaus Bochum" oder dem "Tanzhaus NRW" zu sehen.<br /><br />
+                    Außerdem ist er Popping-Tanzlehrer und gibt sein Wissen an
+                    die nächste Generation weiter.
+                  </p>
+                  <p class="guestbox__text" lang="en">
+                    Dalil Wave is a popping dancer representing both, Morocco
+                    and Germany. As a member of the "DoOnlyGood" Fam and the
+                    "Funkadelikz" he took part and won numerous battles such as
+                    "Juste Debout Germany", "Free Spirit Festival" or "KOD
+                    China".<br /><br />
+                    Besides his involvement in the battle scene he is also
+                    rocking theatre stages like "Schauspielhaus Bochum" or
+                    "Tanzhaus NRW".<br /><br />
+                    Also he is teaching Popping and passes on his knowledge to
+                    the next generation.
+                  </p>
+                </div>
+              </div>
+
+              <!--* Guest 2 Contact -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxDalil_2"
+                />
+                <label class="guestbox__label" for="guestboxDalil_2">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Kontakt zu Dalil</h4>
+                    <h4 class="guestbox__h4" lang="en">Connect with Dalil</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
+                </label>
+                <div class="guestbox__content">
+                  <div class="guestbox__contact">
+                    <!--* <a href="https://www.instagram.com/aleksflowjob" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_web.svg" alt="Homepage Icon">
                                 <p>Homepage</p>
                             </button>
                         </a> -->
-    
-                        <!--* <a href="mailto:aleks@example.com" target="_blank" class="guest__link">
+
+                    <!--* <a href="mailto:aleks@example.com" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_mail.svg" alt="Email Icon">
                                 <p>Email</p>
                             </button>
                         </a> -->
-    
-                        <a href="instagram.com/dalil_wave" target="_blank" class="guest__link">
-                            <button class="button__ghost button__and-icon">
-                                <img class="button__link-icon" src="img/icon_ig.svg" alt="Instagram Icon">
-                                <p>Instagram</p>
-                            </button>
-                        </a>
-    
-                        <!--* <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
+
+                    <a
+                      href="instagram.com/dalil_wave"
+                      target="_blank"
+                      class="guest__link"
+                    >
+                      <button class="button__ghost button__and-icon">
+                        <img
+                          class="button__link-icon"
+                          src="../img/icon_ig.svg"
+                          alt="Instagram Icon"
+                        />
+                        <p>Instagram</p>
+                      </button>
+                    </a>
+
+                    <!--* <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_fb.svg" alt="Facebook Icon">
                                 <p>Facebook</p>
                             </button>
                         </a> -->
-    
-                        <!--* <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
+
+                    <!--* <a href="https://www.facebook.com/intelekz" target="_blank" class="guest__link">
                             <button class="button__ghost button__and-icon">
                                 <img class="button__link-icon" src="img/icon_yt.svg" alt="Youtube Icon">
                                 <p>Youtube</p>
                             </button>
                         </a> -->
-                                
-                    </div>
+                  </div>
                 </div>
-            </div>
-    
-        <!--* Guest 2 Fotos -->
-            <div class="guestbox">
-    
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxDalil_3">
-                <label class="guestbox__label" for="guestboxDalil_3">
-                    <section class="guestbox__container">
-    
-                        <h4 class="guestbox__h4" lang="de">Fotos von Dalil</h4>
-                        <h4 class="guestbox__h4" lang="en">Pictures of Dalil</h4>
-                        <div class="guestbox__arrow"></div>
-    
-                    </section>
-                </label>
-                <div class="guestbox__content">
-    
-                    <div class="guestbox__fotos">
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_dalil_01.webp" alt="Aleks on stage">
-                        </div>
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_dalil_02.webp" alt="Aleks is posing">
-                        </div>
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_dalil_03.webp" alt="Aleks is dancing">
-                        </div>
-                        <div class="guestbox__picture">
-                            <img src="../img/guest_image_dalil_04.webp" alt="Aleks in a freeze">
-                        </div>
-                    </div>    
-                </div>
-            </div>
-    
-        <!--* Guest 2 Videos -->
-            <div class="guestbox">
-        
-                <input type="checkbox" name="guestbox switch" class="guestbox__checkbox" id="guestboxDalil_4">
-                <label class="guestbox__label" for="guestboxDalil_4">
-                    <section class="guestbox__container">
-        
-                        <h4 class="guestbox__h4" lang="de">Videos von Dalil</h4>
-                        <h4 class="guestbox__h4" lang="en">Videos of Dalil</h4>
-                        <div class="guestbox__arrow"></div>
-        
-                    </section>
-                </label>
-                <div class="guestbox__content">
-                    <input type="checkbox" name="video agreement" class="video__checkbox" id="videoCheckDalil">     
-                    <div class="video__agreement">    
-                        <label for="videoCheckDalil" class="video__label">
-                            <p class="video__agreetext"  lang="de">Klicke hier, um der Nutzung von Youtube zuzustimmen.</p>
-                            <p class="video__agreetext" lang="en">Check the box to agree to privacy terms from Youtube.</p>
-                        </label>
-                    </div>
+              </div>
 
-                    <div class="guestbox__videos">
-                        
-                        <h5>Dalil Freestyle</h5>
-                        <div class="videobox">
-                            <div class="video__blocker">
-                                <p class="video__blocker--text" lang="de">Erst zustimmen</p>
-                                <p class="video__blocker--text" lang="en">First accept</p>
-                            </div>
-                            <iframe class="guestbox__videos--iframe" 
-                            src="https://www.youtube.com/embed/bOv2UqrjQvI"
-                            title="Dalil Freestyle - Dance Performance" 
-                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+              <!--* Guest 2 Fotos -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxDalil_3"
+                />
+                <label class="guestbox__label" for="guestboxDalil_3">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Fotos von Dalil</h4>
+                    <h4 class="guestbox__h4" lang="en">Pictures of Dalil</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
+                </label>
+                <div class="guestbox__content">
+                  <div class="guestbox__fotos">
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_dalil_01.webp"
+                        alt="Aleks on stage"
+                      />
+                    </div>
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_dalil_02.webp"
+                        alt="Aleks is posing"
+                      />
+                    </div>
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_dalil_03.webp"
+                        alt="Aleks is dancing"
+                      />
+                    </div>
+                    <div class="guestbox__picture">
+                      <img
+                        src="../img/guest_image_dalil_04.webp"
+                        alt="Aleks in a freeze"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--* Guest 2 Videos -->
+              <div class="guestbox">
+                <input
+                  type="checkbox"
+                  name="guestbox switch"
+                  class="guestbox__checkbox"
+                  id="guestboxDalil_4"
+                />
+                <label class="guestbox__label" for="guestboxDalil_4">
+                  <section class="guestbox__container">
+                    <h4 class="guestbox__h4" lang="de">Videos von Dalil</h4>
+                    <h4 class="guestbox__h4" lang="en">Videos of Dalil</h4>
+                    <div class="guestbox__arrow"></div>
+                  </section>
+                </label>
+                <div class="guestbox__content">
+                  <input
+                    type="checkbox"
+                    name="video agreement"
+                    class="video__checkbox"
+                    id="videoCheckDalil"
+                  />
+                  <div class="video__agreement">
+                    <label for="videoCheckDalil" class="video__label">
+                      <p class="video__agreetext" lang="de">
+                        Klicke hier, um der Nutzung von Youtube zuzustimmen.
+                      </p>
+                      <p class="video__agreetext" lang="en">
+                        Check the box to agree to privacy terms from Youtube.
+                      </p>
+                    </label>
+                  </div>
+
+                  <div class="guestbox__videos">
+                    <h5>Dalil Freestyle</h5>
+                    <div class="videobox">
+                      <div class="video__blocker">
+                        <p class="video__blocker--text" lang="de">
+                          Erst zustimmen
+                        </p>
+                        <p class="video__blocker--text" lang="en">
+                          First accept
+                        </p>
+                      </div>
+                      <iframe
+                        class="guestbox__videos--iframe"
+                        src="https://www.youtube.com/embed/bOv2UqrjQvI"
+                        title="Dalil Freestyle - Dance Performance"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
                                         <a href=https://www.youtube.com/embed/bOv2UqrjQvI?autoplay=1>
                                         <img src=https://i.ytimg.com/vi/bOv2UqrjQvI/hqdefault.jpg alt='Video of Dalil performing a fresstyle.'><span>▶</span></a>"
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>   
-                        </div>
-                           
-                        <h5>Dalil vs Robozee Battle</h5> 
-                        <div class="videobox">
-                            <div class="video__blocker">
-                                <p class="video__blocker--text" lang="de">Erst zustimmen</p>
-                                <p class="video__blocker--text" lang="en">First accept</p>
-                            </div>                
-                            <iframe class="guestbox__videos--iframe" 
-                            src="https://www.youtube.com/embed/LnOk5_kXMD8" 
-                            title="Dalil vs Robozee - Dance Battle" 
-                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
+
+                    <h5>Dalil vs Robozee Battle</h5>
+                    <div class="videobox">
+                      <div class="video__blocker">
+                        <p class="video__blocker--text" lang="de">
+                          Erst zustimmen
+                        </p>
+                        <p class="video__blocker--text" lang="en">
+                          First accept
+                        </p>
+                      </div>
+                      <iframe
+                        class="guestbox__videos--iframe"
+                        src="https://www.youtube.com/embed/LnOk5_kXMD8"
+                        title="Dalil vs Robozee - Dance Battle"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
                                         <a href=https://www.youtube.com/embed/LnOk5_kXMD8?autoplay=1>
                                         <img src=https://i.ytimg.com/vi/LnOk5_kXMD8/hqdefault.jpg alt='Video of battle Dalil versus Robozee'><span>▶</span></a>"
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>   
-                        </div>
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
 
-                        <h5>Dalil Interview</h5>
-                        <div class="videobox">
-                            <div class="video__blocker">
-                                <p class="video__blocker--text" lang="de">Erst zustimmen</p>
-                                <p class="video__blocker--text" lang="en">First accept</p>
-                            </div>  
-                            <iframe class="guestbox__videos--iframe" 
-                            src="https://www.youtube.com/embed/FS2wwd5VG5Y"
-                            title="Dalil - Interview" 
-                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                    <h5>Dalil Interview</h5>
+                    <div class="videobox">
+                      <div class="video__blocker">
+                        <p class="video__blocker--text" lang="de">
+                          Erst zustimmen
+                        </p>
+                        <p class="video__blocker--text" lang="en">
+                          First accept
+                        </p>
+                      </div>
+                      <iframe
+                        class="guestbox__videos--iframe"
+                        src="https://www.youtube.com/embed/FS2wwd5VG5Y"
+                        title="Dalil - Interview"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
                                         <a href=https://www.youtube.com/embed/FS2wwd5VG5Y?autoplay=1>
                                         <img src=https://i.ytimg.com/vi/FS2wwd5VG5Y/hqdefault.jpg alt='Video of interview with Dalil'><span>▶</span></a>"
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>  
-                        </div>
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
                     </div>
-        
+                  </div>
                 </div>
-            </div>
-    
-            </section>           
-        </article>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+      <div
+        class="up-to-top__button"
+        onclick="topFunction()"
+        id="toTopButton"
+        title="to top"
+      >
+        <div class="up-to-top__button--arrow"></div>
+      </div>
+    </main>
 
-
-
-
-
-    </div>
-</section>
+    <script>
+      console.log(window.innerWidth);
+    </script>
+    <script async defer src="../js/app.js"></script>
+  </body>
+</html>

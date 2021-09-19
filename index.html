@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dance Art festival</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/menu.js"></script>
+    <!-- <script src="js/menu.js"></script> -->
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -102,7 +102,7 @@
           <div class="menu__container">
             <ul class="menu__bar--home">
               <li>
-                <a href="#" id="home" onclick="requestHome()"
+                <a href="index.html" id="home" onclick="requestHome()"
                   ><img
                     class="menu__icon--big daf-logo"
                     src="img/daf_logo.svg"
@@ -114,7 +114,7 @@
               <ul class="menu__bar--privacy">
                 <li>
                   <a
-                    href="#"
+                    href="/pages/impressum.html"
                     id="impressum"
                     class="menu__link"
                     onclick="requestImpressum()"
@@ -123,7 +123,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pages/privacy.html"
                     id="datenschutz"
                     class="menu__link"
                     onclick="requestPrivacy()"
@@ -135,7 +135,7 @@
               <ul class="menu__bar--pages">
                 <li>
                   <a
-                    href="#"
+                    href="/pages/news.html"
                     id="news"
                     class="menu__link"
                     onclick="requestNews()"
@@ -144,7 +144,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pages/guests.html"
                     id="guests"
                     class="menu__link"
                     onclick="requestGuests()"
@@ -154,7 +154,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pages/fotos.html"
                     id="fotos"
                     class="menu__link"
                     onclick="requestFotos()"
@@ -164,7 +164,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pages/videos.html"
                     id="videos"
                     class="menu__link"
                     onclick="requestVideos()"
@@ -173,7 +173,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pages/partners.html"
                     id="partners"
                     class="menu__link"
                     onclick="requestPartners()"
@@ -251,18 +251,95 @@
     </header>
 
     <main>
+<section id="main__website">
+  <div class="landing__container">
+    <div class="container__headline">
+      <p class="headline__display">
+        Dance Art <small><em>festival</em></small>
+      </p>
+      <h1 class="headline__h1" lang="de">Plattform für die urbane Tanzszene</h1>
+      <h1 class="headline__h1" lang="en">Platform for the urban dance scene</h1>
+    </div>
 
-      
-      <section id="main__website"></section>
-      <div
-        class="up-to-top__button"
-        onclick="topFunction()"
-        id="toTopButton"
-        title="to top"
-      >
-        <div class="up-to-top__button--arrow"></div>
+    <!-- <div class="container__background">
+      <div class="background__shadow"></div>
+      <div class="background__slider">
+        <picture class="background__image">
+          <source
+            media="(min-width: 700px)"
+            srcset="../img/landing/slide_01-l.webp"
+          />
+          <img
+            src="../img/landing/slide_01-s.webp"
+            alt="dancing in the shadow"
+          />
+        </picture>
+
+        <picture class="background__image">
+          <source
+            media="(min-width: 700px)"
+            srcset="../img/landing/slide_02-l.webp"
+          />
+          <img
+            src="../img/landing/slide_02-s.webp"
+            alt="dancing in the shadow"
+          />
+        </picture>
+
+        <picture class="background__image">
+          <source
+            media="(min-width: 700px)"
+            srcset="../img/landing/slide_03-l.webp"
+          />
+          <img
+            src="../img/landing/slide_03-s.webp"
+            alt="dancing in the shadow"
+          />
+        </picture>
+
+        <picture class="background__image">
+          <source
+            media="(min-width: 700px)"
+            srcset="../img/landing/slide_04-l.webp"
+          />
+          <img
+            src="../img/landing/slide_04-s.webp"
+            alt="dancing in the shadow"
+          />
+        </picture>
+
+        <picture class="background__image">
+          <source
+            media="(min-width: 700px)"
+            srcset="../img/landing/slide_05-l.webp"
+          />
+          <img
+            src="../img/landing/slide_05-s.webp"
+            alt="dancing in the shadow"
+          />
+        </picture>
+
+        <picture class="background__image">
+          <source
+            media="(min-width: 700px)"
+            srcset="../img/landing/slide_01-l.webp"
+          />
+          <img
+            src="../img/landing/slide_01-s.webp"
+            alt="dancing in the shadow"
+          />
+        </picture>
       </div>
-    </main>
+    </div> -->
+  </div>
+
+
+</section>
+
+<div class="up-to-top__button" onclick="topFunction()" id="toTopButton" title="to top">
+            <div class="up-to-top__button--arrow"></div>
+        </div>
+</main>
 
     <script>
       console.log(window.innerWidth);
