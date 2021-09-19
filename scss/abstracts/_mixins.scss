@@ -108,4 +108,8 @@
   transition: all 300ms ease-in-out;
     // overflow: hidden;
   z-index: 1;
+
+  // @include rwd(mq-s-l) {
+  //   width: calc(var(--card__width) / 2.5)
+  // }
 }
