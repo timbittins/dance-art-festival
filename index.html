@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dance Art festival</title>
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <script src="js/menu.js"></script> -->
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -100,18 +99,19 @@
 
         <div class="menu">
           <div class="menu__container">
-            <ul class="menu__bar--home">
+            <ul class="menu__bar--home" data-menu="menubar">
               <li>
                 <a href="index.html" id="home" onclick="requestHome()"
                   ><img
                     class="menu__icon--big daf-logo"
                     src="img/daf_logo.svg"
                     alt="Dance Art festival Logo"
+                    data-menu="menubar"
                 /></a>
               </li>
             </ul>
-            <div class="menu__bar">
-              <ul class="menu__bar--privacy">
+            <div class="menu__bar" data-menu="menubar">
+              <ul class="menu__bar--privacy" data-menu="menubar">
                 <li>
                   <a
                     href="/pages/impressum.html"
@@ -132,7 +132,7 @@
                   >
                 </li>
               </ul>
-              <ul class="menu__bar--pages">
+              <ul class="menu__bar--pages" data-menu="menubar">
                 <li>
                   <a
                     href="/pages/news.html"
@@ -181,7 +181,7 @@
                   >
                 </li>
               </ul>
-              <ul class="menu__bar--social-media">
+              <ul class="menu__bar--social-media" data-menu="menubar">
                 <li>
                   <a
                     href="https://www.instagram.com/danceartfestival/"
@@ -225,7 +225,7 @@
                   /></a>
                 </li>
               </ul>
-              <div class="menu__bar--languages">
+              <div class="menu__bar--languages" data-menu="menubar">
                 <label for="english">
                   <img
                     data-category="language__english"
@@ -251,17 +251,21 @@
     </header>
 
     <main>
-<section id="main__website">
-  <div class="landing__container">
-    <div class="container__headline">
-      <p class="headline__display">
-        Dance Art <small><em>festival</em></small>
-      </p>
-      <h1 class="headline__h1" lang="de">Plattform für die urbane Tanzszene</h1>
-      <h1 class="headline__h1" lang="en">Platform for the urban dance scene</h1>
-    </div>
+      <section id="main__website">
+        <div class="landing__container">
+          <div class="container__headline">
+            <p class="headline__display">
+              Dance Art <small><em>festival</em></small>
+            </p>
+            <h1 class="headline__h1" lang="de">
+              Plattform für die urbane Tanzszene
+            </h1>
+            <h1 class="headline__h1" lang="en">
+              Platform for the urban dance scene
+            </h1>
+          </div>
 
-    <!-- <div class="container__background">
+          <!-- <div class="container__background">
       <div class="background__shadow"></div>
       <div class="background__slider">
         <picture class="background__image">
@@ -331,19 +335,22 @@
         </picture>
       </div>
     </div> -->
-  </div>
-
-
-</section>
-
-<div class="up-to-top__button" onclick="topFunction()" id="toTopButton" title="to top">
-            <div class="up-to-top__button--arrow"></div>
         </div>
-</main>
+      </section>
+
+      <div
+        class="up-to-top__button"
+        onclick="topFunction()"
+        id="toTopButton"
+        title="to top"
+      >
+        <div class="up-to-top__button--arrow"></div>
+      </div>
+    </main>
 
     <script>
       console.log(window.innerWidth);
     </script>
-    <script async defer src="js/app.js"></script>
+    <script type="module" defer src="js/app.js"></script>
   </body>
 </html>

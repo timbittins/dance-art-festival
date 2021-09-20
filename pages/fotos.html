@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dance Art festival</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <!-- <script src="js/menu.js"></script> -->
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -100,18 +99,19 @@
 
         <div class="menu">
           <div class="menu__container">
-            <ul class="menu__bar--home">
+            <ul class="menu__bar--home" data-menu="menubar">
               <li>
                 <a href="../index.html" id="home" onclick="requestHome()"
                   ><img
                     class="menu__icon--big daf-logo"
                     src="../img/daf_logo.svg"
                     alt="Dance Art festival Logo"
+                    data-menu="menubar"
                 /></a>
               </li>
             </ul>
-            <div class="menu__bar">
-              <ul class="menu__bar--privacy">
+            <div class="menu__bar" data-menu="menubar">
+              <ul class="menu__bar--privacy" data-menu="menubar">
                 <li>
                   <a
                     href="./impressum.html"
@@ -132,7 +132,7 @@
                   >
                 </li>
               </ul>
-              <ul class="menu__bar--pages">
+              <ul class="menu__bar--pages" data-menu="menubar">
                 <li>
                   <a
                     href="./news.html"
@@ -181,7 +181,7 @@
                   >
                 </li>
               </ul>
-              <ul class="menu__bar--social-media">
+              <ul class="menu__bar--social-media" data-menu="menubar">
                 <li>
                   <a
                     href="https://www.instagram.com/danceartfestival/"
@@ -225,7 +225,7 @@
                   /></a>
                 </li>
               </ul>
-              <div class="menu__bar--languages">
+              <div class="menu__bar--languages" data-menu="menubar">
                 <label for="english">
                   <img
                     data-category="language__english"
@@ -251,76 +251,135 @@
     </header>
 
     <main>
-<section id="main__website">
-    <div class="pages__header">
-        <h2 class="pages__h2" lang="de">Fotos</h2>
-        <h2 class="pages__h2" lang="en">Photos</h2>  
-    </div>
-    
-    <div class="pages__content">
+      <section id="main__website">
+        <div class="pages__header">
+          <h2 class="pages__h2" lang="de">Fotos</h2>
+          <h2 class="pages__h2" lang="en">Photos</h2>
+        </div>
 
-        <article class="pages__infobox">
-
-            <input type="checkbox" name="infobox switch" id="infoboxSwitch_1">
+        <div class="pages__content">
+          <article class="pages__infobox">
+            <input type="checkbox" name="infobox switch" id="infoboxSwitch_1" />
             <label class="infobox__label" for="infoboxSwitch_1">
+              <section class="infobox__container">
+                <!-- <img class="infobox__img" src="../img/dad_infopic_1_01.webp" alt="Dancer on stage"> -->
 
-                <section class="infobox__container">
-                    <!-- <img class="infobox__img" src="../img/dad_infopic_1_01.webp" alt="Dancer on stage"> -->
-                    
-                    <div class="infobox__headline">
-                        <!-- <h3 class="infobox__h3" lang="de">Vom Straßenrand zum Broadway</h3>
+                <div class="infobox__headline">
+                  <!-- <h3 class="infobox__h3" lang="de">Vom Straßenrand zum Broadway</h3>
                         <h3 class="infobox__h3" lang="en">From the roadside to Broadway</h3> -->
-                        
-                        <div class="infobox__teaser">
-                            <!-- <p lang="de">Entwicklung der urbanen Tanz-Kultur von einer Randerscheinung zu einer globalen Marke.</p>
-                            <p lang="en">Development of the urban dance culture from a marginal phenomenon to a global brand.</p> -->
-                        </div>
-                        
-                        <!-- <h4 class="infobox__more--de" lang="de"></h4>
-                        <h4 class="infobox__more--en" lang="en"></h4> -->
-                        
-                    </div>
-                </section>
 
+                  <div class="infobox__teaser">
+                    <!-- <p lang="de">Entwicklung der urbanen Tanz-Kultur von einer Randerscheinung zu einer globalen Marke.</p>
+                            <p lang="en">Development of the urban dance culture from a marginal phenomenon to a global brand.</p> -->
+                  </div>
+
+                  <!-- <h4 class="infobox__more--de" lang="de"></h4>
+                        <h4 class="infobox__more--en" lang="en"></h4> -->
+                </div>
+              </section>
             </label>
 
-            <section class="infobox__content">    
-                <p class="infobox__text" lang="de">Musik, Kultur, Ausdruck, Selbstverwirklichung, Bewegung, Austausch, Gemeinschaft. 
-                    Es gibt viele Gründe mit dem Tanzen sein Leben  zu füllen und die eigenen Emotionen mit Gleichgesinnten zu teilen. Die in den 1970er Jahren entstandenen urbanen Tanzformen feiern weltweit ihren Einzug in die Theater, doch wurden sie oft an den Rand der bereits anerkannten Künste gestellt.<br><br>Oft wird über eine übergeordnete Bezeichnung gestritten. Tanzformen, die sich aus Einflüssen der amerikanischen Disko- und Clubszene, den afrikanischen Kulturtänzen und den lateinamerikanischen sozialen Gemeinschaftstänzen entwickelten.<br>
-                    50 Jahre später gehören die urbanen Tänze, die hauptsächlich der Hip Hop-Kultur zugeordnet werden, zu einer global vernetzten Bewegung friedlicher und freier Menschen mit dem Wunsch nach Veränderung und Entwicklung.<br>
-                    Diesen Wunsch zu leben und zu zelebrieren benötigt Raum. Raum, der geschaffen werden muss. <br>
-                    Menschen formen Kunst und Kunst formt eine Gesellschaft.<br><br>
-                    Das Dance Art festival bietet verschiedene Formen der Darstellung für die Tänze Breaking, Popping, Locking, House, Krump und Hip Hop an. Eine Notwendigkeit, da die meißten TänzerInnen nicht über eine offizielle Tanzausbildung verfügen und ihnen dadurch staatliche Unterstützungen nicht in dem Maße zu Verfügung stehen, wie es beispielsweise für die klassischen Tänze der Fall ist.<br>
-                    Aber auch hier findet eine Entwicklung statt. Das Dance Art festival ist offiziell vom Fond Dezentrale Kulturarbeit des Kulturamtes Spandau in Berlin gefördert, um nötigen Raum und Gelder für eine Kunstform bereitzustellen, die längst in den Köpfen der Gesellschaft angekommen ist.</p>
-                <p class="inbox__text" lang="en">Music, culture, expression, self-realization, movement, exchange, community.
-                    There are many reasons to fill your life with dancing, to share your emotions with like-minded people. The urban dance forms that emerged in the 1970s are celebrating their entry into theaters around the world, but they have often been placed on the edge of the already recognized arts.<br><br>Often there is a dispute about a superordinate designation. Dance forms that developed from influences of the American disco and club scene, African cultural dances and Latin American social dances.<br>
-                    50 years later, the urban dances, which are mainly assigned to hip hop culture, belong to a globally networked movement of peaceful and free people with the desire for change and development.<br>
-                    To live and celebrate this desire requires space. Space that needs to be created.
-                    People form art and art forms a society.<br><br>
-                    The Dance Art festival offers different forms of representation for the dances Breaking, Popping, Locking, House, Krump and Hip Hop. A necessity, since most dancers do not have official dance training and therefore state support is not available to the same extent as is the case for classical dances, for example.<br>
-                    But there is a development here, too. The Dance Art festival is officially funded by the decentralized cultural work fund of the Spandau Cultural Office in Berlin in order to provide the necessary space and money for an art form that has long since arrived in society's minds.</p>
+            <section class="infobox__content">
+              <p class="infobox__text" lang="de">
+                Musik, Kultur, Ausdruck, Selbstverwirklichung, Bewegung,
+                Austausch, Gemeinschaft. Es gibt viele Gründe mit dem Tanzen
+                sein Leben zu füllen und die eigenen Emotionen mit
+                Gleichgesinnten zu teilen. Die in den 1970er Jahren entstandenen
+                urbanen Tanzformen feiern weltweit ihren Einzug in die Theater,
+                doch wurden sie oft an den Rand der bereits anerkannten Künste
+                gestellt.<br /><br />Oft wird über eine übergeordnete
+                Bezeichnung gestritten. Tanzformen, die sich aus Einflüssen der
+                amerikanischen Disko- und Clubszene, den afrikanischen
+                Kulturtänzen und den lateinamerikanischen sozialen
+                Gemeinschaftstänzen entwickelten.<br />
+                50 Jahre später gehören die urbanen Tänze, die hauptsächlich der
+                Hip Hop-Kultur zugeordnet werden, zu einer global vernetzten
+                Bewegung friedlicher und freier Menschen mit dem Wunsch nach
+                Veränderung und Entwicklung.<br />
+                Diesen Wunsch zu leben und zu zelebrieren benötigt Raum. Raum,
+                der geschaffen werden muss. <br />
+                Menschen formen Kunst und Kunst formt eine Gesellschaft.<br /><br />
+                Das Dance Art festival bietet verschiedene Formen der
+                Darstellung für die Tänze Breaking, Popping, Locking, House,
+                Krump und Hip Hop an. Eine Notwendigkeit, da die meißten
+                TänzerInnen nicht über eine offizielle Tanzausbildung verfügen
+                und ihnen dadurch staatliche Unterstützungen nicht in dem Maße
+                zu Verfügung stehen, wie es beispielsweise für die klassischen
+                Tänze der Fall ist.<br />
+                Aber auch hier findet eine Entwicklung statt. Das Dance Art
+                festival ist offiziell vom Fond Dezentrale Kulturarbeit des
+                Kulturamtes Spandau in Berlin gefördert, um nötigen Raum und
+                Gelder für eine Kunstform bereitzustellen, die längst in den
+                Köpfen der Gesellschaft angekommen ist.
+              </p>
+              <p class="inbox__text" lang="en">
+                Music, culture, expression, self-realization, movement,
+                exchange, community. There are many reasons to fill your life
+                with dancing, to share your emotions with like-minded people.
+                The urban dance forms that emerged in the 1970s are celebrating
+                their entry into theaters around the world, but they have often
+                been placed on the edge of the already recognized arts.<br /><br />Often
+                there is a dispute about a superordinate designation. Dance
+                forms that developed from influences of the American disco and
+                club scene, African cultural dances and Latin American social
+                dances.<br />
+                50 years later, the urban dances, which are mainly assigned to
+                hip hop culture, belong to a globally networked movement of
+                peaceful and free people with the desire for change and
+                development.<br />
+                To live and celebrate this desire requires space. Space that
+                needs to be created. People form art and art forms a society.<br /><br />
+                The Dance Art festival offers different forms of representation
+                for the dances Breaking, Popping, Locking, House, Krump and Hip
+                Hop. A necessity, since most dancers do not have official dance
+                training and therefore state support is not available to the
+                same extent as is the case for classical dances, for example.<br />
+                But there is a development here, too. The Dance Art festival is
+                officially funded by the decentralized cultural work fund of the
+                Spandau Cultural Office in Berlin in order to provide the
+                necessary space and money for an art form that has long since
+                arrived in society's minds.
+              </p>
             </section>
-        </article>
-            
-        <button class="button__regular">zurück</button>
-        <button class="button__regular">Abschicken</button>
-        <button class="button__regular">Daten Abschicken</button>
-        <button class="button__icon button__icon--arrow">
-            <svg class="arrow--right" xmlns="http://www.w3.org/2000/svg" width="149" height="172" viewBox="0 0 149 172">
-                <path id="Polygon_1" data-name="Polygon 1" d="M68.678,30.011a20,20,0,0,1,34.644,0L154.686,119a20,20,0,0,1-17.322,30H34.636a20,20,0,0,1-17.322-30Z" transform="translate(149) rotate(90)"/>
-              </svg>
-        </button>
-        <button class="button__icon button__icon--arrow">
-            <svg class="arrow--left" xmlns="http://www.w3.org/2000/svg" width="149" height="172" viewBox="0 0 149 172">
-                <path id="Polygon_1" data-name="Polygon 1" d="M68.678,30.011a20,20,0,0,1,34.644,0L154.686,119a20,20,0,0,1-17.322,30H34.636a20,20,0,0,1-17.322-30Z" transform="translate(149) rotate(90)"/>
-              </svg>
-        </button>
+          </article>
 
-
-
-
-    </div>
-</section>
+          <button class="button__regular">zurück</button>
+          <button class="button__regular">Abschicken</button>
+          <button class="button__regular">Daten Abschicken</button>
+          <button class="button__icon button__icon--arrow">
+            <svg
+              class="arrow--right"
+              xmlns="http://www.w3.org/2000/svg"
+              width="149"
+              height="172"
+              viewBox="0 0 149 172"
+            >
+              <path
+                id="Polygon_1"
+                data-name="Polygon 1"
+                d="M68.678,30.011a20,20,0,0,1,34.644,0L154.686,119a20,20,0,0,1-17.322,30H34.636a20,20,0,0,1-17.322-30Z"
+                transform="translate(149) rotate(90)"
+              />
+            </svg>
+          </button>
+          <button class="button__icon button__icon--arrow">
+            <svg
+              class="arrow--left"
+              xmlns="http://www.w3.org/2000/svg"
+              width="149"
+              height="172"
+              viewBox="0 0 149 172"
+            >
+              <path
+                id="Polygon_1"
+                data-name="Polygon 1"
+                d="M68.678,30.011a20,20,0,0,1,34.644,0L154.686,119a20,20,0,0,1-17.322,30H34.636a20,20,0,0,1-17.322-30Z"
+                transform="translate(149) rotate(90)"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
 
       <div
         class="up-to-top__button"
@@ -335,6 +394,6 @@
     <script>
       console.log(window.innerWidth);
     </script>
-    <script async defer src="../js/app.js"></script>
+    <script type="module" defer src="../js/app.js"></script>
   </body>
 </html>
