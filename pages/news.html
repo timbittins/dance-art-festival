@@ -84,12 +84,12 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
 
-  <body>
-    <input type="radio" id="english" name="language" value="english" />
-    <input type="radio" id="german" name="language" value="german" checked />
+<body>
+  <input type="radio" id="english" name="language" value="english" />
+  <input type="radio" id="german" name="language" value="german" checked />
 
-    <header class="header__main">
-      <nav>
+  <header class="header__main">
+    <nav>
         <input type="checkbox" name="navigation switch" id="navigation" />
         <label for="navigation">
           <div class="menu__button menu__icon--big">
@@ -101,7 +101,7 @@
           <div class="menu__container">
             <ul class="menu__bar--home" data-menu="menubar">
               <li>
-                <a href="../index.html" id="home" onclick="requestHome()"
+                <a href="../index.html" id="home"
                   ><img
                     class="menu__icon--big daf-logo"
                     src="../img/daf_logo.svg"
@@ -117,7 +117,6 @@
                     href="./impressum.html"
                     id="impressum"
                     class="menu__link"
-                    onclick="requestImpressum()"
                     ><p>Impressum</p></a
                   >
                 </li>
@@ -126,7 +125,6 @@
                     href="./privacy.html"
                     id="datenschutz"
                     class="menu__link"
-                    onclick="requestPrivacy()"
                     ><p lang="de">Datenschutz</p>
                     <p lang="en">Privacy</p></a
                   >
@@ -138,7 +136,6 @@
                     href="./news.html"
                     id="news"
                     class="menu__link"
-                    onclick="requestNews()"
                     ><p>News</p></a
                   >
                 </li>
@@ -147,7 +144,6 @@
                     href="./guests.html"
                     id="guests"
                     class="menu__link"
-                    onclick="requestGuests()"
                     ><p lang="de">Gäste</p>
                     <p lang="en">Guests</p></a
                   >
@@ -157,7 +153,6 @@
                     href="./fotos.html"
                     id="fotos"
                     class="menu__link"
-                    onclick="requestFotos()"
                     ><p lang="de">Fotos</p>
                     <p lang="en">Photos</p></a
                   >
@@ -167,7 +162,6 @@
                     href="./videos.html"
                     id="videos"
                     class="menu__link"
-                    onclick="requestVideos()"
                     ><p>Videos</p></a
                   >
                 </li>
@@ -176,7 +170,6 @@
                     href="./partners.html"
                     id="partners"
                     class="menu__link"
-                    onclick="requestPartners()"
                     ><p>Partner</p></a
                   >
                 </li>
@@ -247,14 +240,14 @@
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+    </nav>
+    <h2 class="header__headline">News</h2>
+  </header>
 
-    <main>
-      <section id="main__website">
-        <div class="pages__header">
-          <h2 class="pages__h2">News</h2>
-        </div>
+  <main id="main">
+    <div class="container">
+
+        
 
         <div class="pages__content">
           <!-- card 1 -->
@@ -600,22 +593,26 @@
               </div>
             </section>
           </article>
-        </div>
-      </section>
+        </section>
+      </div>
+    </div>
+  </main>
 
-      <div
+  <footer>
+  <div
         class="up-to-top__button"
         onclick="topFunction()"
         id="toTopButton"
         title="to top"
       >
         <div class="up-to-top__button--arrow"></div>
-      </div>
-    </main>
+      </div> 
+  </footer>
 
-    <script>
-      console.log(window.innerWidth);
-    </script>
-    <script type="module" defer src="../js/app.js"></script>
-  </body>
+  <script>
+    console.log(window.innerWidth);
+  </script>
+  <script type="module" defer src="../js/app.js"></script>
+
+</body>
 </html>

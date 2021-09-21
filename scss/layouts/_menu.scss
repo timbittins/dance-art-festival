@@ -1,6 +1,4 @@
 /* M E N U */
-
-
 .menu {
     position: fixed;
     top: 0;
@@ -21,7 +19,6 @@
         // background-color: #fff;
     }
 }
-
 
 // Logo
 .menu__bar--home {
@@ -60,7 +57,6 @@
     align-items: center;
     background-color: $clr-grey-dark;
     box-shadow: 0 0 0 0.2rem $clr-prime;
-
 
     @include rwd(mq-l) {
         &::after {
@@ -353,7 +349,6 @@
     }
 }
 
-.daf-logo {}
 
 #navigation:checked~.menu .daf-logo {
     transform: translate(0, 0);
@@ -363,7 +358,9 @@
 .menu__bar--languages,
 .menu__bar--pages,
 .menu__bar--social-media {
-    transition: transform 0.6s ease;
+    transition-property: transform;
+    transition-duration: 600ms;
+    transition-timing-function: ease ;
 }
 
 #navigation:checked~.menu .menu__bar--privacy,

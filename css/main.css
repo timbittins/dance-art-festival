@@ -1134,7 +1134,9 @@ body {
 .menu__bar--languages,
 .menu__bar--pages,
 .menu__bar--social-media {
-  transition: transform 0.6s ease;
+  transition-property: transform;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
 }
 
 #navigation:checked ~ .menu .menu__bar--privacy,
@@ -1279,33 +1281,56 @@ body {
   display: block;
 }
 
-/* H E A D E R */
-.header__main {
-  position: relative;
-  display: flex;
+/* B O D Y */
+body {
+  display: grid;
+  grid-template-columns: repeat(12);
+  grid-template-rows: 20rem 1fr;
+  grid-gap: 0 10px;
   width: 100vw;
-  z-index: 90;
+  min-height: 100vh;
+  background: var(--clr-grey-dark) url("../../img/background.jpg");
 }
-.header__main nav {
+
+/* H E A D E R */
+header nav {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
 }
 
-/* B O D Y */
-body {
-  width: 100vw;
-  min-height: 100vh;
+header {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+}
+header .header__headline {
+  align-self: flex-end;
 }
 
-#main__website {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: 100vh;
-  background: var(--clr-grey-dark);
+/* M A I N */
+main {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 0 1rem;
+  margin-top: 4rem;
+}
+
+.container {
+  grid-column: 2/12;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+  grid-gap: 4rem;
+  place-items: center;
 }
 
 .landing__container {
@@ -1422,30 +1447,4 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.pages__header {
-  position: relative;
-  width: 100vw;
-}
-.pages__header .pages__h2 {
-  text-align: center;
-  margin: 3rem 0;
-}
-@media (min-width: 65.625em) {
-  .pages__header .pages__h2 {
-    margin: 15rem 0 0;
-  }
-}
-
-/* C O N T E N T */
-.pages__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem 3rem;
-  width: 100%;
-  min-height: 100vh;
-  padding: 3rem 0;
 }/*# sourceMappingURL=main.css.map */

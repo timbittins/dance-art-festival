@@ -101,7 +101,7 @@
           <div class="menu__container">
             <ul class="menu__bar--home" data-menu="menubar">
               <li>
-                <a href="index.html" id="home" onclick="requestHome()"
+                <a href="index.html" id="home"
                   ><img
                     class="menu__icon--big daf-logo"
                     src="img/daf_logo.svg"
@@ -117,7 +117,6 @@
                     href="/pages/impressum.html"
                     id="impressum"
                     class="menu__link"
-                    onclick="requestImpressum()"
                     ><p>Impressum</p></a
                   >
                 </li>
@@ -126,7 +125,6 @@
                     href="/pages/privacy.html"
                     id="datenschutz"
                     class="menu__link"
-                    onclick="requestPrivacy()"
                     ><p lang="de">Datenschutz</p>
                     <p lang="en">Privacy</p></a
                   >
@@ -138,7 +136,6 @@
                     href="/pages/news.html"
                     id="news"
                     class="menu__link"
-                    onclick="requestNews()"
                     ><p>News</p></a
                   >
                 </li>
@@ -147,7 +144,6 @@
                     href="/pages/guests.html"
                     id="guests"
                     class="menu__link"
-                    onclick="requestGuests()"
                     ><p lang="de">Gäste</p>
                     <p lang="en">Guests</p></a
                   >
@@ -157,7 +153,6 @@
                     href="/pages/fotos.html"
                     id="fotos"
                     class="menu__link"
-                    onclick="requestFotos()"
                     ><p lang="de">Fotos</p>
                     <p lang="en">Photos</p></a
                   >
@@ -167,7 +162,6 @@
                     href="/pages/videos.html"
                     id="videos"
                     class="menu__link"
-                    onclick="requestVideos()"
                     ><p>Videos</p></a
                   >
                 </li>
@@ -176,7 +170,6 @@
                     href="/pages/partners.html"
                     id="partners"
                     class="menu__link"
-                    onclick="requestPartners()"
                     ><p>Partner</p></a
                   >
                 </li>
@@ -250,8 +243,8 @@
       </nav>
     </header>
 
-    <main>
-      <section id="main__website">
+    <main id="main">
+      <div class="container">
         <div class="landing__container">
           <div class="container__headline">
             <p class="headline__display">
@@ -265,79 +258,82 @@
             </h1>
           </div>
 
-          <!-- <div class="container__background">
-      <div class="background__shadow"></div>
-      <div class="background__slider">
-        <picture class="background__image">
-          <source
-            media="(min-width: 700px)"
-            srcset="../img/landing/slide_01-l.webp"
-          />
-          <img
-            src="../img/landing/slide_01-s.webp"
-            alt="dancing in the shadow"
-          />
-        </picture>
+          <div class="container__background">
+            <div class="background__shadow"></div>
 
-        <picture class="background__image">
-          <source
-            media="(min-width: 700px)"
-            srcset="../img/landing/slide_02-l.webp"
-          />
-          <img
-            src="../img/landing/slide_02-s.webp"
-            alt="dancing in the shadow"
-          />
-        </picture>
+            <div class="background__slider">
+              <picture class="background__image">
+                <source
+                  media="(min-width: 700px)"
+                  srcset="../img/landing/slide_01-l.webp"
+                />
+                <img
+                  src="../img/landing/slide_01-s.webp"
+                  alt="dancing in the shadow"
+                />
+              </picture>
 
-        <picture class="background__image">
-          <source
-            media="(min-width: 700px)"
-            srcset="../img/landing/slide_03-l.webp"
-          />
-          <img
-            src="../img/landing/slide_03-s.webp"
-            alt="dancing in the shadow"
-          />
-        </picture>
+              <picture class="background__image">
+                <source
+                  media="(min-width: 700px)"
+                  srcset="../img/landing/slide_02-l.webp"
+                />
+                <img
+                  src="../img/landing/slide_02-s.webp"
+                  alt="dancing in the shadow"
+                />
+              </picture>
 
-        <picture class="background__image">
-          <source
-            media="(min-width: 700px)"
-            srcset="../img/landing/slide_04-l.webp"
-          />
-          <img
-            src="../img/landing/slide_04-s.webp"
-            alt="dancing in the shadow"
-          />
-        </picture>
+              <picture class="background__image">
+                <source
+                  media="(min-width: 700px)"
+                  srcset="../img/landing/slide_03-l.webp"
+                />
+                <img
+                  src="../img/landing/slide_03-s.webp"
+                  alt="dancing in the shadow"
+                />
+              </picture>
 
-        <picture class="background__image">
-          <source
-            media="(min-width: 700px)"
-            srcset="../img/landing/slide_05-l.webp"
-          />
-          <img
-            src="../img/landing/slide_05-s.webp"
-            alt="dancing in the shadow"
-          />
-        </picture>
+              <picture class="background__image">
+                <source
+                  media="(min-width: 700px)"
+                  srcset="../img/landing/slide_04-l.webp"
+                />
+                <img
+                  src="../img/landing/slide_04-s.webp"
+                  alt="dancing in the shadow"
+                />
+              </picture>
 
-        <picture class="background__image">
-          <source
-            media="(min-width: 700px)"
-            srcset="../img/landing/slide_01-l.webp"
-          />
-          <img
-            src="../img/landing/slide_01-s.webp"
-            alt="dancing in the shadow"
-          />
-        </picture>
-      </div>
-    </div> -->
+              <picture class="background__image">
+                <source
+                  media="(min-width: 700px)"
+                  srcset="../img/landing/slide_05-l.webp"
+                />
+                <img
+                  src="../img/landing/slide_05-s.webp"
+                  alt="dancing in the shadow"
+                />
+              </picture>
+
+              <picture class="background__image">
+                <source
+                  media="(min-width: 700px)"
+                  srcset="../img/landing/slide_01-l.webp"
+                />
+                <img
+                  src="../img/landing/slide_01-s.webp"
+                  alt="dancing in the shadow"
+                />
+              </picture>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </main>
 
+    <footer>
       <div
         class="up-to-top__button"
         onclick="topFunction()"
@@ -346,7 +342,7 @@
       >
         <div class="up-to-top__button--arrow"></div>
       </div>
-    </main>
+    </footer>
 
     <script>
       console.log(window.innerWidth);
