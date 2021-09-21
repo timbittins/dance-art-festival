@@ -1,7 +1,7 @@
 /* B O D Y */
 body {
   display: grid;
-  grid-template-columns: repeat(12);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 20rem 1fr;
   grid-gap: 0 10px;
   width: 100vw;

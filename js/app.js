@@ -1,5 +1,6 @@
 import { log, getSelector, getSelectors, getID } from "./setup.js";
 import autoMenuSwitch from "./menu.js";
+import slideShow from "./slider.js";
 
 // // Close card Button
 // const cardCloseBtns = getSelectors(".card__closer");
