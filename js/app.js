@@ -1,6 +1,19 @@
+console.log("start");
 import { log, getSelector, getSelectors, getID } from "./setup.js";
 import autoMenuSwitch from "./menu.js";
+import toTopFunction from "./toTop.js";
 import slideShow from "./slider.js";
+
+autoMenuSwitch();
+toTopFunction();
+checkForHomepage();
+
+function checkForHomepage() {
+  let check = false;
+  if (document.location.pathname === "/index.html") check = true;
+  return check;
+}
+if (checkForHomepage() === true) slideShow();
 
 // // Close card Button
 // const cardCloseBtns = getSelectors(".card__closer");
@@ -18,24 +31,4 @@ import slideShow from "./slider.js";
 //     });
 // }
 
-// TO TOP BUTTON
-const toTopButton = getID("toTopButton");
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    toTopButton.style.display = "flex";
-  } else {
-    toTopButton.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+log("end");

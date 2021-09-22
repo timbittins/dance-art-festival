@@ -1,7 +1,6 @@
 import { log, getSelector, getSelectors, getID } from "./setup.js";
-log("test")
+
 let slideIndex = 0;
-slideShow();
 
 function slideShow() {
   const fallBackBackground = getSelector(".landing__container");

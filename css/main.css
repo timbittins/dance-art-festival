@@ -879,10 +879,10 @@ body {
 }
 @media (min-width: 43.75em) and (orientation: portrait) {
   .menu__button--lines::before {
-    bottom: calc(var(--button-lines__padding) + .3rem);
+    bottom: calc(var(--button-lines__padding) + 0.3rem);
   }
   .menu__button--lines::after {
-    top: calc(var(--button-lines__padding) + .3rem);
+    top: calc(var(--button-lines__padding) + 0.3rem);
   }
 }
 
@@ -1162,7 +1162,7 @@ body {
   position: relative;
   top: 2px;
   border: solid var(--clr-prime);
-  border-width: 0 clamp(.5rem, 1.5vw, .7rem) clamp(.5rem, 1.5vw, .7rem) 0;
+  border-width: 0 clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.5rem, 1.5vw, 0.7rem) 0;
   display: inline-block;
   padding: 5px;
   transform: rotate(-135deg);
@@ -1174,7 +1174,7 @@ body {
   }
   .up-to-top__button:hover .up-to-top__button--arrow {
     border: solid var(--clr-contrast);
-    border-width: 0 clamp(.5rem, 1.5vw, .7rem) clamp(.5rem, 1.5vw, .7rem) 0;
+    border-width: 0 clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.5rem, 1.5vw, 0.7rem) 0;
   }
 }
 
@@ -1344,10 +1344,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 3rem;
   width: 100%;
   height: 100%;
+  margin: 5vh 0 0;
   padding: 0 15vw;
   z-index: 2;
 }
@@ -1367,7 +1368,7 @@ main {
 @media (min-width: 30em) and (orientation: landscape) {
   .container__headline {
     gap: 0rem;
-    padding: 0 0 0 10vw;
+    padding: 0 2vw 0 20vw;
   }
   .container__headline .headline__display {
     margin: 5vh 0;
@@ -1379,14 +1380,15 @@ main {
 }
 @media (min-width: 43.75em) and (orientation: portrait) {
   .container__headline {
-    padding: 0 20vw;
+    margin: 0;
+    padding: 10vh 20vw 0;
   }
   .container__headline .headline__display {
-    margin: 18vh 0 8vh;
+    margin: 0;
     font-size: 13rem;
   }
-  .container__headline .headline__h2 {
-    font-size: 3.5rem;
+  .container__headline .headline__h1 {
+    font-size: 4rem;
   }
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
@@ -1394,16 +1396,17 @@ main {
     padding: 0 0 0 25vw;
   }
   .container__headline .headline__display {
-    margin: 18vh 0 8vh;
+    margin-bottom: 5vh;
     font-size: 13rem;
   }
-  .container__headline .headline__h2 {
+  .container__headline .headline__h1 {
     font-size: 3.5rem;
+    left: 0;
   }
 }
 @media (min-width: 65.625em) {
   .container__headline {
-    padding: 0;
+    padding: 0 0 0 50vh;
   }
   .container__headline .headline__display {
     margin: 3vh 0;

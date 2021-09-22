@@ -11,17 +11,18 @@
 
 .container__headline {
   position: relative;
-  @include flex(column);
+  @include flex(column, center, flex-start);
   gap: 3rem;
   width: 100%;
   height: 100%;
+  margin: 5vh 0 0;
   padding: 0 15vw;
   z-index: 2;
   & > * {
     margin: 0;
     color: $clr-prime;
   }
-  
+
   .headline__display {
     font-family: isidora-medium, sans-serif;
     font-size: 8rem;
@@ -35,28 +36,29 @@
 
   @include rwd(mq-s-l) {
     gap: 0rem;
-    padding: 0 0 0 10vw;
-    
+    padding: 0 2vw 0 20vw;
+
     .headline__display {
       margin: 5vh 0;
       font-size: 6rem;
     }
-    
+
     .headline__h1 {
       font-size: 3rem;
     }
   }
 
   @include rwd(mq-m-p) {
-    padding: 0 20vw;
+    margin: 0;
+    padding: 10vh 20vw 0;
 
     .headline__display {
-      margin: 18vh 0 8vh;
+      margin: 0;
       font-size: 13rem;
     }
 
-    .headline__h2 {
-      font-size: 3.5rem;
+    .headline__h1 {
+      font-size: 4rem;
     }
   }
 
@@ -64,17 +66,18 @@
     padding: 0 0 0 25vw;
 
     .headline__display {
-      margin: 18vh 0 8vh;
+      margin-bottom: 5vh;
       font-size: 13rem;
     }
 
-    .headline__h2 {
+    .headline__h1 {
       font-size: 3.5rem;
+      left: 0;
     }
   }
 
   @include rwd(mq-l) {
-    padding: 0;
+    padding: 0 0 0 50vh;
 
     .headline__display {
       margin: 3vh 0;

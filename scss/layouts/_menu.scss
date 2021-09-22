@@ -1,408 +1,405 @@
 /* M E N U */
 .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-color: red;
 
-    & label {
-        position: fixed;
-        top: $icon-big__padding;
-        right: $icon-big__padding;
-        height: $icon-big__size--s;
-        width: $icon-big__size--s;
-        border-radius: 50%;
-        cursor: pointer;
-        z-index: 93;
-        // background-color: #fff;
-    }
+  & label {
+    position: fixed;
+    top: $icon-big__padding;
+    right: $icon-big__padding;
+    height: $icon-big__size--s;
+    width: $icon-big__size--s;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 93;
+    // background-color: #fff;
+  }
 }
 
 // Logo
 .menu__bar--home {
-    height: 0;
+  height: 0;
 }
 
 .daf-logo {
-    top: $icon-big__padding;
-    left: $icon-big__padding;
-    box-shadow: 0 0 0 .2rem var(--clr-prime);;
-    transform: translate(-100vw, 0);
-    transition: box-shadow 300ms ease-in-out, transform 600ms ease;
-    margin: 0;
+  top: $icon-big__padding;
+  left: $icon-big__padding;
+  box-shadow: 0 0 0 0.2rem var(--clr-prime);
+  transform: translate(-100vw, 0);
+  transition: box-shadow 300ms ease-in-out, transform 600ms ease;
+  margin: 0;
 
-    @include rwd(mq-l) {
-        &:hover {
-            box-shadow: $box-shadow__hover;
-        }
+  @include rwd(mq-l) {
+    &:hover {
+      box-shadow: $box-shadow__hover;
     }
+  }
 }
-
 
 //-------------------------------------------------------------------------------------
 
 // Menu Checkbox
 #navigation {
-    display: none;
+  display: none;
 }
 
 /* M E N U   B U T T O N */
 .menu__button {
-    top: $icon-big__padding;
-    right: $icon-big__padding;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $clr-grey-dark;
-    box-shadow: 0 0 0 0.2rem $clr-prime;
+  top: $icon-big__padding;
+  right: $icon-big__padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $clr-grey-dark;
+  box-shadow: 0 0 0 0.2rem $clr-prime;
 
-    @include rwd(mq-l) {
-        &::after {
-            content: '';
-            position: fixed;
-            height: $icon-big__size--s;
-            width: $icon-big__size--s;
-            border-radius: 50%;
-            box-shadow: 0 0 0 0.4rem $clr-contrast;
-            opacity: 0;
-            transition: opacity 0.2s ease-in-out;
-        }
+  @include rwd(mq-l) {
+    &::after {
+      content: "";
+      position: fixed;
+      height: $icon-big__size--s;
+      width: $icon-big__size--s;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0.4rem $clr-contrast;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
     }
+  }
 
-    &:hover::after {
-        opacity: 1;
-    }
+  &:hover::after {
+    opacity: 1;
+  }
 }
 
 // Menu Button Lines
 .menu__button--lines {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    box-shadow: 0 0 0 0.1rem $clr-prime;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  box-shadow: 0 0 0 0.1rem $clr-prime;
+  transition: all 0.3s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: $button-lines__padding;
+    width: 100%;
+    box-shadow: inherit;
+    z-index: 99;
     transition: all 0.3s ease;
+  }
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: $button-lines__padding;
-        width: 100%;
-        box-shadow: inherit;
-        z-index: 99;
-        transition: all 0.3s ease;
+  &::after {
+    top: $button-lines__padding;
+  }
+
+  @include rwd(mq-m-p) {
+    &::before {
+      bottom: calc(var(--button-lines__padding) + 0.3rem);
     }
 
     &::after {
-        top: $button-lines__padding;
+      top: calc(var(--button-lines__padding) + 0.3rem);
     }
-
-    @include rwd(mq-m-p) {
-        &::before {
-            bottom: calc(var(--button-lines__padding) + .3rem);
-        }
-
-        &::after {
-            top: calc(var(--button-lines__padding) + .3rem);
-        }
-    }
+  }
 }
 
 // Button Lines hover
 @include rwd(mq-l) {
-
-    .menu__button:hover>.menu__button--lines,
-    #navigation:checked+label .menu__button:hover>.menu__button--lines,
-    #navigation:checked+label .menu__button:hover>.menu__button--lines::after {
-        box-shadow: 0 0 0 0.15rem $clr-contrast;
-    }
+  .menu__button:hover > .menu__button--lines,
+  #navigation:checked + label .menu__button:hover > .menu__button--lines,
+  #navigation:checked
+    + label
+    .menu__button:hover
+    > .menu__button--lines::after {
+    box-shadow: 0 0 0 0.15rem $clr-contrast;
+  }
 }
 
 /* M E N U   B U T T O N   A N I M A T I O N */
 // Button Checkbox checked
-#navigation:checked+label .menu__button {
-    box-shadow: 0 0 0 0.2rem $clr-white;
+#navigation:checked + label .menu__button {
+  box-shadow: 0 0 0 0.2rem $clr-white;
 
-    &>.menu__button--lines {
-        transform: rotate(225deg);
-        box-shadow: 0 0 0 0.1rem $clr-white;
+  & > .menu__button--lines {
+    transform: rotate(225deg);
+    box-shadow: 0 0 0 0.1rem $clr-white;
 
-        &::before,
-        &::after {
-            top: 0;
-            transform: rotate(90deg);
-            z-index: 99;
-            box-shadow: 0 0 0 0.1rem $clr-white;
-        }
+    &::before,
+    &::after {
+      top: 0;
+      transform: rotate(90deg);
+      z-index: 99;
+      box-shadow: 0 0 0 0.1rem $clr-white;
     }
+  }
 }
 
 //-------------------------------------------------------------------------------------
 
-
 /* M E N U   B A R S */
 .menu__container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
 }
 
 .menu__bar {
-    opacity: 0;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    height: 0;
-    background: transparent;
-    transition: all 0.4s ease;
-
+  opacity: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 0;
+  background: transparent;
+  transition: all 0.4s ease;
 }
 
 .menu__bar--pages {
-    position: relative;
-    top: $menu-bars__padding--top;
-    display: flex;
+  position: relative;
+  top: $menu-bars__padding--top;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 0 auto;
+  background: $clr-grey-dark;
+  box-shadow: 0 0 0 2px $clr-prime;
+  border-radius: 2rem;
+  transform: translate(100vw, 0);
+  z-index: 90;
+
+  @include rwd(mq-s-l) {
+    top: $icon-big__padding;
+  }
+
+  @include rwd(mq-m-p) {
+    top: calc(var(--icon-big__padding) * 3.5);
+  }
+
+  @include rwd(mq-m-l) {
+    top: calc(var(--icon-big__padding) * 3);
+  }
+
+  @include rwd(mq-l) {
+    position: absolute;
+    top: 3.5rem;
+    right: 16rem;
     flex-direction: column;
-    width: 50vw;
-    margin: 0 auto;
-    background: $clr-grey-dark;
-    box-shadow: 0 0 0 2px $clr-prime;
-    border-radius: 2rem;
-    transform: translate(100vw, 0);
-    z-index: 90;
+    width: 30rem;
+  }
 
-    @include rwd(mq-s-l) {
-        top: $icon-big__padding;
-    }
-
-    @include rwd(mq-m-p) {
-        top: calc(var(--icon-big__padding) * 3.5);
-    }
-
-    @include rwd(mq-m-l) {
-        top: calc(var(--icon-big__padding) * 3);
-    }
-
-    @include rwd(mq-l) {
-        position: absolute;
-        top: 3.5rem;
-        right: 16rem;
-        flex-direction: column;
-        width: 30rem;
-    }
-
-    @include rwd(mq-xl) {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        top: $icon-big__padding;
-        width: 76rem;
-        border-radius: 4rem;
-    }
+  @include rwd(mq-xl) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    top: $icon-big__padding;
+    width: 76rem;
+    border-radius: 4rem;
+  }
 }
 
 .menu__bar--privacy {
-    position: relative;
-    top: 12rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+  position: relative;
+  top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50vw;
+  background: $clr-grey-dark;
+  box-shadow: 0 0 0 2px $clr-prime;
+  border-radius: 2rem;
+  order: 1;
+  transform: translate(-100vw, 0);
+
+  @include rwd(mq-s-l) {
+    top: 5rem;
+    flex-direction: row;
     width: 50vw;
-    background: $clr-grey-dark;
-    box-shadow: 0 0 0 2px $clr-prime;
-    border-radius: 2rem;
-    order: 1;
-    transform: translate(-100vw, 0);
+    padding: 0 2rem;
+    border-radius: 4rem;
+  }
 
-    @include rwd(mq-s-l) {
-        top: 5rem;
-        flex-direction: row;
-        width: 50vw;
-        padding: 0 2rem;
-        border-radius: 4rem;
-    }
+  @include rwd(mq-m-p) {
+    top: 16rem;
+  }
+  @include rwd(mq-m-l) {
+    top: calc(var(--icon-big__padding) * 3 + 5rem);
+  }
 
-    @include rwd(mq-m-p) {
-        top: 16rem;
-    }
-    @include rwd(mq-m-l) {
-        top: calc(var(--icon-big__padding) * 3 + 5rem);
-    }
-
-    @include rwd(mq-l) {
-        position: absolute;
-        top: $icon-big__padding;
-        left: 14rem;
-        width: auto;
-    }
+  @include rwd(mq-l) {
+    position: absolute;
+    top: $icon-big__padding;
+    left: 14rem;
+    width: auto;
+  }
 }
 
 .menu__bar--social-media {
-    position: fixed;
-    top: $menu-bars__padding--top;
-    left: $icon-big__padding;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem;
-    width: $icon-big__size--s;
-    margin: $menu-bars__margin;
-    padding: 2rem 0;
-    background: $clr-grey-dark;
-    box-shadow: 0 0 0 2px $clr-prime;
-    border-radius: 4rem;
-    transform: translate(0, -100vh);
+  position: fixed;
+  top: $menu-bars__padding--top;
+  left: $icon-big__padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  width: $icon-big__size--s;
+  margin: $menu-bars__margin;
+  padding: 2rem 0;
+  background: $clr-grey-dark;
+  box-shadow: 0 0 0 2px $clr-prime;
+  border-radius: 4rem;
+  transform: translate(0, -100vh);
 
-    & li {
-        padding: 0;
-    }
+  & li {
+    padding: 0;
+  }
 
-    @include rwd(mq-s-l) {
-        top: calc(var(--icon-big__padding) * 3);
-    }
+  @include rwd(mq-s-l) {
+    top: calc(var(--icon-big__padding) * 3);
+  }
 
-    @include rwd(mq-m-p) {
-        top: calc(var(--icon-big__padding) * 3.5);
-        width: $icon-big__size--l;
-        gap: 2.5rem;
-        padding: 2.5rem 0;
-    }
+  @include rwd(mq-m-p) {
+    top: calc(var(--icon-big__padding) * 3.5);
+    width: $icon-big__size--l;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+  }
 
-    @include rwd(mq-m-l) {
-        top: calc(var(--icon-big__padding) * 3);
-        width: $icon-big__size--l;
-        gap: 2.5rem;
-        padding: 2.5rem 0;
-    }
+  @include rwd(mq-m-l) {
+    top: calc(var(--icon-big__padding) * 3);
+    width: $icon-big__size--l;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+  }
 
-    @include rwd(mq-l) {
-        padding: 1vw 0;
-    }
+  @include rwd(mq-l) {
+    padding: 1vw 0;
+  }
 
-    & li {
-        width: auto;
-    }
+  & li {
+    width: auto;
+  }
 }
 
 .menu__bar--languages {
-    position: fixed;
-    top: $menu-bars__padding--top;
-    right: $icon-big__padding;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: $icon-big__size--s;
-    background: $clr-grey-dark;
-    box-shadow: 0 0 0 .2rem $clr-prime;
-    border-radius: 4rem;
-    transform: translate(0, -100vh);
+  position: fixed;
+  top: $menu-bars__padding--top;
+  right: $icon-big__padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: $icon-big__size--s;
+  background: $clr-grey-dark;
+  box-shadow: 0 0 0 0.2rem $clr-prime;
+  border-radius: 4rem;
+  transform: translate(0, -100vh);
 
-    @include rwd(mq-s-l) {
-        top: calc($icon-big__padding);
-    }
+  @include rwd(mq-s-l) {
+    top: calc($icon-big__padding);
+  }
 
-    @include rwd(mq-m-p) {
-        top: calc(var(--icon-big__padding) * 3.5);
-        width: $icon-big__size--l;
-    }
+  @include rwd(mq-m-p) {
+    top: calc(var(--icon-big__padding) * 3.5);
+    width: $icon-big__size--l;
+  }
 
-    @include rwd(mq-m-l) {
-        top: calc(var(--icon-big__padding) * 3);
-        width: $icon-big__size--l;
-    }
+  @include rwd(mq-m-l) {
+    top: calc(var(--icon-big__padding) * 3);
+    width: $icon-big__size--l;
+  }
 }
 
 #english,
 #german {
-    display: none;
+  display: none;
 
-    & label {
-        border-radius: 50%;
-    }
+  & label {
+    border-radius: 50%;
+  }
 }
 
 /* M E N U   B A R S   A N I M A T I O N */
-#navigation:checked~.menu .menu__bar {
-    opacity: 1;
-    // background: $clr-grey-dark-tr;
-    @include bg-color-overlay(#000, .8);
-    height: 100vh;
+#navigation:checked ~ .menu .menu__bar {
+  opacity: 1;
+  // background: $clr-grey-dark-tr;
+  @include bg-color-overlay(#000, 0.8);
+  height: 100vh;
 
-    @include rwd(mq-l) {
-        height: 0;
-        background: transparent;
-    }
+  @include rwd(mq-l) {
+    height: 0;
+    background: transparent;
+  }
 }
 
-
-#navigation:checked~.menu .daf-logo {
-    transform: translate(0, 0);
+#navigation:checked ~ .menu .daf-logo {
+  transform: translate(0, 0);
 }
 
 .menu__bar--privacy,
 .menu__bar--languages,
 .menu__bar--pages,
 .menu__bar--social-media {
-    transition-property: transform;
-    transition-duration: 600ms;
-    transition-timing-function: ease ;
+  transition-property: transform;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
 }
 
-#navigation:checked~.menu .menu__bar--privacy,
-#navigation:checked~.menu .menu__bar .menu__bar--languages,
-#navigation:checked~.menu .menu__bar .menu__bar--pages,
-#navigation:checked~.menu .menu__bar .menu__bar--social-media {
-    transform: translate(0, 0);
+#navigation:checked ~ .menu .menu__bar--privacy,
+#navigation:checked ~ .menu .menu__bar .menu__bar--languages,
+#navigation:checked ~ .menu .menu__bar .menu__bar--pages,
+#navigation:checked ~ .menu .menu__bar .menu__bar--social-media {
+  transform: translate(0, 0);
 }
-
 
 /* TO TOP BUTTON */
 .up-to-top__button {
-    @extend .menu__icon--big;
-    position: fixed;
-    bottom: unquote("min(50px, 20vw)");
-    right: $icon-big__padding;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background-color: $clr-grey-dark;
-    box-shadow: 0 0 0 0.2rem $clr-prime;
-    transition: box-shadow 300ms ease;
+  @extend .menu__icon--big;
+  position: fixed;
+  bottom: unquote("min(50px, 20vw)");
+  right: $icon-big__padding;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: $clr-grey-dark;
+  box-shadow: 0 0 0 0.2rem $clr-prime;
+  transition: box-shadow 300ms ease;
 
-    & .up-to-top__button--arrow {
-        position: relative;
-        top: 2px;
-        border: solid $clr-prime;
-        border-width: 0 clamp(.5rem, 1.5vw, .7rem) clamp(.5rem, 1.5vw, .7rem) 0;
-        display: inline-block;
-        padding: 5px;
-        transform: rotate(-135deg);
-        transition: all 300ms ease;
+  & .up-to-top__button--arrow {
+    position: relative;
+    top: 2px;
+    border: solid $clr-prime;
+    border-width: 0 clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.5rem, 1.5vw, 0.7rem) 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-135deg);
+    transition: all 300ms ease;
+  }
+
+  @include rwd(mq-l) {
+    &:hover {
+      box-shadow: $box-shadow__hover;
+
+      & .up-to-top__button--arrow {
+        border: solid $clr-contrast;
+        border-width: 0 clamp(0.5rem, 1.5vw, 0.7rem)
+          clamp(0.5rem, 1.5vw, 0.7rem) 0;
+      }
     }
-
-    @include rwd(mq-l) {
-        &:hover {
-            box-shadow: $box-shadow__hover;
-
-            & .up-to-top__button--arrow {
-                border: solid $clr-contrast;
-                border-width: 0 clamp(.5rem, 1.5vw, .7rem) clamp(.5rem, 1.5vw, .7rem) 0;
-            }
-        }
-    }
+  }
 }

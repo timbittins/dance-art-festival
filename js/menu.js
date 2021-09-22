@@ -1,6 +1,5 @@
 import { log, getSelector, getSelectors, getID } from "./setup.js";
 
-autoMenuSwitch();
 function autoMenuSwitch() {
   const navCheckbox = getID("navigation");
   const menuBars = [...getSelectors("[data-menu]")];
@@ -8,7 +7,7 @@ function autoMenuSwitch() {
 
   // On load
   if (window.innerWidth > 1050) {
-    log("bigger then 1050");
+    // log("bigger then 1050");
     navCheckbox.checked = true;
     menuBars.forEach((menuBar) => (menuBar.style.transitionDuration = "0s"));
   } else {
@@ -18,13 +17,13 @@ function autoMenuSwitch() {
 
   // On resize
   window.addEventListener("resize", function () {
-    log("resize");
+    // log("resize");
     if (window.innerWidth < 1050) navCheckbox.checked = false;
   });
 
   // On menubutton click
   menuButton.addEventListener("click", function () {
-    log("button clicked");
+    // log("button clicked");
     menuBars.forEach((menuBar) => (menuBar.style.transitionDuration = "600ms"));
   });
 }
