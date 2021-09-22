@@ -77,14 +77,15 @@
   }
 
   @include rwd(mq-l) {
-    padding: 0 0 0 50vh;
+    padding: 0 0 0 65vh;
 
     .headline__display {
-      margin: 3vh 0;
+      margin: -10vh 0 5vh;
+
       font-size: 13rem;
     }
 
-    .headline__h2 {
+    .headline__h1 {
       line-height: 0;
       font-size: 4.5rem;
       text-align: right;

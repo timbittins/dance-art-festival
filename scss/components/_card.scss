@@ -5,42 +5,48 @@
 
 // Card Container
 .card__container {
-  @include flex(column);
   width: 100%;
+  height: 100%;
   border: 0.2rem solid $clr-prime;
   border-radius: var(--card__border-radius);
-  padding: 0;
-  margin: 0;
   overflow: hidden;
 
   & .card__img--container {
     width: 100%;
-    height: 20rem;
-    overflow: hidden;
+    height: 65%;
   }
-  & .card__img {
+  & .card__img { 
     width: 100%;
   }
 
   & .card__headline {
-    @include flex(column);
     position: relative;
+    @include flex;
     width: 100%;
-    height: 40%;
-    padding: 2rem 0;
-    background-color: $clr-grey-dark;
+    height: 35%;
+    // padding: 3rem 3rem 0;
+    background-color:  #3f3901;
   }
 
   & .card__h3 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 0 3rem;
   }
 
+  & .card__opener {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 15%;
+    height: 40%;
+    border-radius: 1rem 0 0 0;
+    background-color: $clr-prime;
+  }  
   & .card__opener--arrow {
-    align-self: flex-end;
-    @extend .menu__icon--small;
-    position: relative;
-    right: 2rem;
+    width: 65%;
+    height: 60%;
+    transition: var(--transition);
   }
 
   & .card__teaser {
@@ -73,7 +79,7 @@
     transition: var(--transition);
   }
   & .card__closer--arrow {
-    height: 4rem;
+    height: 65%;
     transform: rotate(-180deg);
   }
   .card__closer--show {
@@ -94,7 +100,7 @@
 // Card Container
 .card__checkbox:checked + .card__label {
   & .card__opener--arrow {
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
   }
 }
 // Card Content

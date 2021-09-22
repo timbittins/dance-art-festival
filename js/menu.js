@@ -17,7 +17,7 @@ function autoMenuSwitch() {
 
   // On resize
   window.addEventListener("resize", function () {
-    // log("resize");
+    log(window.innerWidth);
     if (window.innerWidth < 1050) navCheckbox.checked = false;
   });
 

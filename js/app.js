@@ -15,20 +15,20 @@ function checkForHomepage() {
 }
 if (checkForHomepage() === true) slideShow();
 
-// // Close card Button
-// const cardCloseBtns = getSelectors(".card__closer");
-// const cardCheckboxes = [...getSelectors(".card__checkbox")];
+// Close card Button
+const cardCloseBtns = getSelectors(".card__closer");
+const cardCheckboxes = [...getSelectors(".card__checkbox")];
 
-// cardCloseBtns.forEach((button) => {
-//   button.classList.add("card__closer--show");
-// });
+cardCloseBtns.forEach((button) => {
+  button.classList.add("card__closer--show");
+});
 
-// for (let i = 0; i < cardCheckboxes.length; i++) {
-//     cardCloseBtns[i].addEventListener("click", function () {
-//         const checkboxID = getID(`cardSwitch_${i+1}`);
-//         log(checkboxID);
-//       checkboxID.checked = false;
-//     });
-// }
+for (let i = 0; i < cardCheckboxes.length; i++) {
+    cardCloseBtns[i].addEventListener("click", function () {
+        const checkboxID = getID(`cardSwitch_${i+1}`);
+        log(checkboxID);
+      checkboxID.checked = false;
+    });
+}
 
 log("end");

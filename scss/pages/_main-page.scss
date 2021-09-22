@@ -1,12 +1,30 @@
 /* B O D Y */
 body {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 20rem 1fr;
-  grid-gap: 0 10px;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 10vh 1fr;
+  grid-gap: 0;
   width: 100vw;
   min-height: 100vh;
   background: $clr-grey-dark url("../../img/background.jpg");
+
+  @include rwd(mq-s-l) {
+    grid-template-columns: 5% repeat(4, 1fr) 5%;
+    grid-template-rows: 25vh 1fr;
+    grid-gap: 0 20px;
+  }
+  @include rwd(mq-m-p) {
+    grid-template-columns: 7.5% 1fr 1fr 1fr 1fr 7.5%;
+    grid-gap: 0 3vw;
+  }
+  @include rwd(mq-m-l) {
+    grid-template-columns: 7.5% 1fr 1fr 1fr 1fr 7.5%;
+    grid-gap: 0 3vw;
+  }
+  @include rwd(mq-l) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 1vw;
+  }
 }
 
 /* H E A D E R */
@@ -18,33 +36,50 @@ header nav {
   z-index: 99;
 }
 header {
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
-  position: relative;
-  @include flex;
+  position: absolute;
+  @include flex($align-items: flex-start);
   z-index: 90;
-
+  width: 100%;
+  // display: none;
   & .header__headline {
-    align-self: flex-end;
+    margin-top: 5vh;
+    text-transform: uppercase;
   }
 }
 
 /* M A I N */
 main {
-  grid-column: 1 / 13;
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  grid-gap: 0 1rem;
-  margin-top: 4rem;
-}
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 4rem 0;
+  // place-items: center;
+  margin-top: 6rem;
+  // background-color: crimson;
 
-.container {
-    grid-column: 2 / 12;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-    grid-gap: 4rem;
-    place-items: center;
+  @include rwd(mq-s-l) {
+    grid-column: 2 / 6;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem 2rem;
+  }
+  @include rwd(mq-m-p) {
+    grid-column: 2 / 6;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 4rem 3vw;
+    height: 200px;
+    margin-top: 10rem;
+  }
+  @include rwd(mq-m-l) {
+    grid-column: 2 / 6;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem 3vw;
+  }
+  @include rwd(mq-l) {
+    grid-column: 3 / 11;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem    2vw;
+  }
 }
-
