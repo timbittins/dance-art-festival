@@ -80,6 +80,6 @@ main {
   @include rwd(mq-l) {
     grid-column: 3 / 11;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 4rem    2vw;
+    grid-gap: 4rem 2vw;
   }
 }
